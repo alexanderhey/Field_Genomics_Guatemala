@@ -11,9 +11,6 @@
     <loc>/programs/</loc>
     <lastmod>2024-10-22T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/contactus/</loc>
-    <lastmod>2024-10-02T00:00:00-07:00</lastmod>
-  </url><url>
     <loc>/getting-ready/</loc>
     <lastmod>2024-10-02T00:00:00-07:00</lastmod>
   </url><url>
@@ -88,8 +85,6 @@
   </url><url>
     <loc>/gallery/</loc>
   </url><url>
-    <loc>/replicate-this-workshop/</loc>
-  </url><url>
     <loc>/workedexample/</loc>
   </url><url>
     <loc>/content/alert/</loc>
@@ -109,6 +104,8 @@
     <loc>/tags/code/</loc>
   </url><url>
     <loc>/shortcodes/code/</loc>
+  </url><url>
+    <loc>/contactus/</loc>
   </url><url>
     <loc>/categories/content/</loc>
   </url><url>
@@ -167,6 +164,8 @@
     <loc>/tags/quotations/</loc>
   </url><url>
     <loc>/shortcodes/quote/</loc>
+  </url><url>
+    <loc>/replicate-this-workshop/</loc>
   </url><url>
     <loc>/tags/request/</loc>
   </url><url>
