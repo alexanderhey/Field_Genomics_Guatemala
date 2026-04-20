@@ -1,0 +1,6 @@
+/* Hide default Paige nav on homepage only */
+body.page-home header,
+body.page-home nav,
+body.page-home .paige-site-header {
+  display: none !important;
+}

@@ -1,0 +1,9 @@
+/* Remove Paige's default container padding on full-bleed sections */
+.mepa-hero,
+.stat-strip,
+.itinerary-bg,
+.footer-cta {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  border-radius: 0 !important;
+}

@@ -1,5 +1,12 @@
 
 
+
+
+
+
+
+
+
 <!doctype html>
 
 
@@ -7,23 +14,23 @@
 
 
 
-<html  data-paige="Paige theme from https://github.com/willfaught/paige"   lang="en-us" >
+<html    lang="en-us" >
 
     
 
 
 
 
-
-
-
-
-
-
+    
+        
     
 
     
+        
 
+        
+            
+        
     
 
 
@@ -32,9 +39,78 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
 
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 <meta charset="utf-8">
+<meta content="" name="apple-mobile-web-app-title">
 
 
 
@@ -42,26 +118,19 @@
 
 
 
-<meta content="#0d6efd" name="msapplication-TileColor">
-
-
-    <meta content="/browserconfig.xml" name="msapplication-config">
-
-
-<meta content="https://github.com/willfaught/paige" name="theme">
 <meta content="#0d6efd" name="theme-color">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
 <meta property="og:url" content="//localhost:4321/workflows/">
   <meta property="og:title" content="Nanopore workflow">
-  <meta property="og:description" content=" Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023).">
+  <meta property="og:description" content="Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023) .">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Nanopore workflow">
-  <meta name="twitter:description" content=" Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023).">
+  <meta name="twitter:description" content="Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023) .">
 
 
 
@@ -72,7 +141,16 @@
     
 
 
+
+
+
+
+
     <link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+
+
+
+    <link href="../favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 
 
 
@@ -80,23 +158,15 @@
 
 
 
-    <link href="../favicon.png" rel="icon" type="image/png">
-
-
-
     <link href="../favicon.svg" rel="icon" type="image/svg+xml">
 
 
 
-    <link href="../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="../web-app-manifest-192x192.png" rel="icon" type="image/png">
 
 
 
-    <link href="../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-
-
-
-    <link color="#0d6efd" href="../safari-pinned-tab.svg" rel="mask-icon">
+    <link href="../web-app-manifest-512x512.png" rel="icon" type="image/png">
 
 
 
@@ -122,58 +192,42 @@
 
 
 
-
-
-
     
+        
 
-    
         
         
         
-    
+        
 
-    
+        
+
         
     
 
     
-    
-    
-
-
-<link  crossorigin="anonymous"  href="../css/paige/bootstrap/6186ad141d391e4c0c10d2e9cb4eaeaadf75e809-paige.min.3cce59baa4c0a377a71878f54d31de5b98388de7f970c7988c276bcf39500c5f.css"  integrity="sha256-PM5ZuqTAo3enGHj1TTHeW5g4jef5cMeYjCdrzzlQDF8="   referrerpolicy="no-referrer"  rel="stylesheet">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
 
     
 
     
     
-    
 
 
-<link  crossorigin="anonymous"  href="../css/paige/bootstrap-icons/bootstrap-icons.min.540116b7267d4b2410c74086ae6497566928c6d5715900be7ce7279ad45addcd.css"  integrity="sha256-VAEWtyZ9SyQQx0CGrmSXVmkoxtVxWQC&#43;fOcnmtRa3c0="   referrerpolicy="no-referrer"  rel="stylesheet">
+<link  crossorigin="anonymous"  href="../css/paige/paige.6d187e671773e147c063a34ae9ded60667e9ece8.min.52c97a72b4275ed01b7703dd68934d86531557d699bdcad43047d850ce93393e.css"  integrity="sha256-Usl6crQnXtAbdwPdaJNNhlMVV9aZvcrUMEfYUM6TOT4="   referrerpolicy="no-referrer"  rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,303 +235,270 @@
 
 
     
+        
 
-<style>
+        
+        
+        
+        
+
+        
+
+        
+    
+
+    
+        
+
+        
+    
 
     
 
+    
+    
 
-.paige-figure-numbered {
-    counter-increment: paige-figure-numbered;
-}
 
-.paige-figure-numbered > div > figure > figcaption::before {
-    content: "Figure " counter(paige-figure-numbered) ": ";
-}
-
-.paige-figure-numbered > div > figure > figcaption:empty::before {
-    content: "Figure " counter(paige-figure-numbered);
-}
-
-.paige-header-link {
-    opacity: 0;
-    margin-left: 0.5rem;
-    position: absolute;
-    transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
-}
-
-.paige-header-link::after {
-    content: "#";
-}
-
-.paige-quote .blockquote-footer {
-    margin-top: 0;
-}
-
-.paige-quote blockquote {
-    border-left: 0;
-    border-right: 0;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-blockquote {
-    padding: 0.5rem 1rem;
-    border-left: 0.25rem solid var(--bs-border-color);
-    border-right: 0.25rem solid var(--bs-body-bg);
-}
-
-td,
-th {
-    padding: 0.25rem;
-}
-
-.highlight .chroma .hl,
-.highlight .chroma .lnt {
-    display: flex;
-}
-
-.paige-row-narrow:not(:last-child),
-.paige-figure .paige-quote,
-.paige-figure .paige-video,
-.paige-figure .highlight pre.chroma,
-.paige-figure .highlight .chroma pre,
-.paige-figure .paige-quote blockquote,
-.paige-figure figure > div > :last-child,
-.paige-gallery .paige-figure,
-.paige-gallery .paige-image,
-blockquote > p:last-of-type {
-    margin-bottom: 0;
-}
-
-.paige-figure,
-.paige-gallery,
-.paige-image,
-.paige-quote,
-.paige-row-narrow:last-child,
-.paige-row-wide,
-.paige-video,
-#paige-content > *,
-table {
-    margin-bottom: 1rem;
-}
-
-.paige-header-link:focus,
-.paige-header-link:hover,
-:hover > .paige-header-link,
-:target > .paige-header-link {
-    opacity: 1;
-}
+<link  crossorigin="anonymous"  href="../css/paige/bootstrap/paige.14af94fab147af3def91a3f41c4d4186937373dd.min.90c4c73a5ddf76cf66b04df8e3422cb32b261a91b8768e3807bd11b85e20d1ef.css"  integrity="sha256-kMTHOl3fds9msE3440IssysmGpG4do44B70RuF4g0e8="   referrerpolicy="no-referrer"  rel="stylesheet">
 
 
 
 
-    @media (prefers-color-scheme: dark) {
-        /* Background */ .bg { color: #c9d1d9; background-color: var(--bs-body-bg); }
-/* PreWrapper */ .chroma { color: #c9d1d9; background-color: var(--bs-body-bg); }
-/* Other */ .chroma .x {  }
-/* Error */ .chroma .err { color: #f85149 }
-/* CodeLine */ .chroma .cl {  }
-/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
-/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
-/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
-/* LineHighlight */ .chroma .hl { background-color: #4f4f4d }
-/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #64686c }
-/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #6e7681 }
-/* Line */ .chroma .line { display: flex; }
-/* Keyword */ .chroma .k { color: #ff7b72 }
-/* KeywordConstant */ .chroma .kc { color: #79c0ff }
-/* KeywordDeclaration */ .chroma .kd { color: #ff7b72 }
-/* KeywordNamespace */ .chroma .kn { color: #ff7b72 }
-/* KeywordPseudo */ .chroma .kp { color: #79c0ff }
-/* KeywordReserved */ .chroma .kr { color: #ff7b72 }
-/* KeywordType */ .chroma .kt { color: #ff7b72 }
-/* Name */ .chroma .n {  }
-/* NameAttribute */ .chroma .na {  }
-/* NameBuiltin */ .chroma .nb {  }
-/* NameBuiltinPseudo */ .chroma .bp {  }
-/* NameClass */ .chroma .nc { color: #f0883e; font-weight: bold }
-/* NameConstant */ .chroma .no { color: #79c0ff; font-weight: bold }
-/* NameDecorator */ .chroma .nd { color: #d2a8ff; font-weight: bold }
-/* NameEntity */ .chroma .ni { color: #ffa657 }
-/* NameException */ .chroma .ne { color: #f0883e; font-weight: bold }
-/* NameFunction */ .chroma .nf { color: #d2a8ff; font-weight: bold }
-/* NameFunctionMagic */ .chroma .fm {  }
-/* NameLabel */ .chroma .nl { color: #79c0ff; font-weight: bold }
-/* NameNamespace */ .chroma .nn { color: #ff7b72 }
-/* NameOther */ .chroma .nx {  }
-/* NameProperty */ .chroma .py { color: #79c0ff }
-/* NameTag */ .chroma .nt { color: #7ee787 }
-/* NameVariable */ .chroma .nv { color: #79c0ff }
-/* NameVariableClass */ .chroma .vc {  }
-/* NameVariableGlobal */ .chroma .vg {  }
-/* NameVariableInstance */ .chroma .vi {  }
-/* NameVariableMagic */ .chroma .vm {  }
-/* Literal */ .chroma .l { color: #a5d6ff }
-/* LiteralDate */ .chroma .ld { color: #79c0ff }
-/* LiteralString */ .chroma .s { color: #a5d6ff }
-/* LiteralStringAffix */ .chroma .sa { color: #79c0ff }
-/* LiteralStringBacktick */ .chroma .sb { color: #a5d6ff }
-/* LiteralStringChar */ .chroma .sc { color: #a5d6ff }
-/* LiteralStringDelimiter */ .chroma .dl { color: #79c0ff }
-/* LiteralStringDoc */ .chroma .sd { color: #a5d6ff }
-/* LiteralStringDouble */ .chroma .s2 { color: #a5d6ff }
-/* LiteralStringEscape */ .chroma .se { color: #79c0ff }
-/* LiteralStringHeredoc */ .chroma .sh { color: #79c0ff }
-/* LiteralStringInterpol */ .chroma .si { color: #a5d6ff }
-/* LiteralStringOther */ .chroma .sx { color: #a5d6ff }
-/* LiteralStringRegex */ .chroma .sr { color: #79c0ff }
-/* LiteralStringSingle */ .chroma .s1 { color: #a5d6ff }
-/* LiteralStringSymbol */ .chroma .ss { color: #a5d6ff }
-/* LiteralNumber */ .chroma .m { color: #a5d6ff }
-/* LiteralNumberBin */ .chroma .mb { color: #a5d6ff }
-/* LiteralNumberFloat */ .chroma .mf { color: #a5d6ff }
-/* LiteralNumberHex */ .chroma .mh { color: #a5d6ff }
-/* LiteralNumberInteger */ .chroma .mi { color: #a5d6ff }
-/* LiteralNumberIntegerLong */ .chroma .il { color: #a5d6ff }
-/* LiteralNumberOct */ .chroma .mo { color: #a5d6ff }
-/* Operator */ .chroma .o { color: #ff7b72; font-weight: bold }
-/* OperatorWord */ .chroma .ow { color: #ff7b72; font-weight: bold }
-/* Punctuation */ .chroma .p {  }
-/* Comment */ .chroma .c { color: #8b949e; font-style: italic }
-/* CommentHashbang */ .chroma .ch { color: #8b949e; font-style: italic }
-/* CommentMultiline */ .chroma .cm { color: #8b949e; font-style: italic }
-/* CommentSingle */ .chroma .c1 { color: #8b949e; font-style: italic }
-/* CommentSpecial */ .chroma .cs { color: #8b949e; font-weight: bold; font-style: italic }
-/* CommentPreproc */ .chroma .cp { color: #8b949e; font-weight: bold; font-style: italic }
-/* CommentPreprocFile */ .chroma .cpf { color: #8b949e; font-weight: bold; font-style: italic }
-/* Generic */ .chroma .g {  }
-/* GenericDeleted */ .chroma .gd { color: #ffa198; background-color: #490202 }
-/* GenericEmph */ .chroma .ge { font-style: italic }
-/* GenericError */ .chroma .gr { color: #ffa198 }
-/* GenericHeading */ .chroma .gh { color: #79c0ff; font-weight: bold }
-/* GenericInserted */ .chroma .gi { color: #56d364; background-color: #0f5323 }
-/* GenericOutput */ .chroma .go { color: #8b949e }
-/* GenericPrompt */ .chroma .gp { color: #8b949e }
-/* GenericStrong */ .chroma .gs { font-weight: bold }
-/* GenericSubheading */ .chroma .gu { color: #79c0ff }
-/* GenericTraceback */ .chroma .gt { color: #ff7b72 }
-/* GenericUnderline */ .chroma .gl { text-decoration: underline }
-/* TextWhitespace */ .chroma .w { color: #6e7681 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+    
+
+
+<link  crossorigin="anonymous"  href="../css/paige/bootstrap-icons/bootstrap-icons.min.93276a5444db3cc8ad19a40f7d58eee71b335d21a674536a7d078bc6417c610e.css"  integrity="sha256-kydqVETbPMitGaQPfVju5xszXSGmdFNqfQeLxkF8YQ4="   referrerpolicy="no-referrer"  rel="stylesheet">
+
+
+
+
+
+
+
+    
+
+    <style>
+    #paige-page-word-count,
+    #paige-page-reading-time,
+    #paige-page-toc {
+      display: none !important;
     }
+    </style>
 
-    @media (prefers-color-scheme: light) {
-        /* Background */ .bg { background-color: #ffffff; }
-/* PreWrapper */ .chroma { background-color: #ffffff; }
-/* Other */ .chroma .x {  }
-/* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
-/* CodeLine */ .chroma .cl {  }
-/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
-/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
-/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
-/* LineHighlight */ .chroma .hl { background-color: #ffffcc }
-/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
-/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
-/* Line */ .chroma .line { display: flex; }
-/* Keyword */ .chroma .k { color: #000000; font-weight: bold }
-/* KeywordConstant */ .chroma .kc { color: #000000; font-weight: bold }
-/* KeywordDeclaration */ .chroma .kd { color: #000000; font-weight: bold }
-/* KeywordNamespace */ .chroma .kn { color: #000000; font-weight: bold }
-/* KeywordPseudo */ .chroma .kp { color: #000000; font-weight: bold }
-/* KeywordReserved */ .chroma .kr { color: #000000; font-weight: bold }
-/* KeywordType */ .chroma .kt { color: #445588; font-weight: bold }
-/* Name */ .chroma .n {  }
-/* NameAttribute */ .chroma .na { color: #008080 }
-/* NameBuiltin */ .chroma .nb { color: #0086b3 }
-/* NameBuiltinPseudo */ .chroma .bp { color: #999999 }
-/* NameClass */ .chroma .nc { color: #445588; font-weight: bold }
-/* NameConstant */ .chroma .no { color: #008080 }
-/* NameDecorator */ .chroma .nd { color: #3c5d5d; font-weight: bold }
-/* NameEntity */ .chroma .ni { color: #800080 }
-/* NameException */ .chroma .ne { color: #990000; font-weight: bold }
-/* NameFunction */ .chroma .nf { color: #990000; font-weight: bold }
-/* NameFunctionMagic */ .chroma .fm {  }
-/* NameLabel */ .chroma .nl { color: #990000; font-weight: bold }
-/* NameNamespace */ .chroma .nn { color: #555555 }
-/* NameOther */ .chroma .nx {  }
-/* NameProperty */ .chroma .py {  }
-/* NameTag */ .chroma .nt { color: #000080 }
-/* NameVariable */ .chroma .nv { color: #008080 }
-/* NameVariableClass */ .chroma .vc { color: #008080 }
-/* NameVariableGlobal */ .chroma .vg { color: #008080 }
-/* NameVariableInstance */ .chroma .vi { color: #008080 }
-/* NameVariableMagic */ .chroma .vm {  }
-/* Literal */ .chroma .l {  }
-/* LiteralDate */ .chroma .ld {  }
-/* LiteralString */ .chroma .s { color: #dd1144 }
-/* LiteralStringAffix */ .chroma .sa { color: #dd1144 }
-/* LiteralStringBacktick */ .chroma .sb { color: #dd1144 }
-/* LiteralStringChar */ .chroma .sc { color: #dd1144 }
-/* LiteralStringDelimiter */ .chroma .dl { color: #dd1144 }
-/* LiteralStringDoc */ .chroma .sd { color: #dd1144 }
-/* LiteralStringDouble */ .chroma .s2 { color: #dd1144 }
-/* LiteralStringEscape */ .chroma .se { color: #dd1144 }
-/* LiteralStringHeredoc */ .chroma .sh { color: #dd1144 }
-/* LiteralStringInterpol */ .chroma .si { color: #dd1144 }
-/* LiteralStringOther */ .chroma .sx { color: #dd1144 }
-/* LiteralStringRegex */ .chroma .sr { color: #009926 }
-/* LiteralStringSingle */ .chroma .s1 { color: #dd1144 }
-/* LiteralStringSymbol */ .chroma .ss { color: #990073 }
-/* LiteralNumber */ .chroma .m { color: #009999 }
-/* LiteralNumberBin */ .chroma .mb { color: #009999 }
-/* LiteralNumberFloat */ .chroma .mf { color: #009999 }
-/* LiteralNumberHex */ .chroma .mh { color: #009999 }
-/* LiteralNumberInteger */ .chroma .mi { color: #009999 }
-/* LiteralNumberIntegerLong */ .chroma .il { color: #009999 }
-/* LiteralNumberOct */ .chroma .mo { color: #009999 }
-/* Operator */ .chroma .o { color: #000000; font-weight: bold }
-/* OperatorWord */ .chroma .ow { color: #000000; font-weight: bold }
-/* Punctuation */ .chroma .p {  }
-/* Comment */ .chroma .c { color: #999988; font-style: italic }
-/* CommentHashbang */ .chroma .ch { color: #999988; font-style: italic }
-/* CommentMultiline */ .chroma .cm { color: #999988; font-style: italic }
-/* CommentSingle */ .chroma .c1 { color: #999988; font-style: italic }
-/* CommentSpecial */ .chroma .cs { color: #999999; font-weight: bold; font-style: italic }
-/* CommentPreproc */ .chroma .cp { color: #999999; font-weight: bold; font-style: italic }
-/* CommentPreprocFile */ .chroma .cpf { color: #999999; font-weight: bold; font-style: italic }
-/* Generic */ .chroma .g {  }
-/* GenericDeleted */ .chroma .gd { color: #000000; background-color: #ffdddd }
-/* GenericEmph */ .chroma .ge { color: #000000; font-style: italic }
-/* GenericError */ .chroma .gr { color: #aa0000 }
-/* GenericHeading */ .chroma .gh { color: #999999 }
-/* GenericInserted */ .chroma .gi { color: #000000; background-color: #ddffdd }
-/* GenericOutput */ .chroma .go { color: #888888 }
-/* GenericPrompt */ .chroma .gp { color: #555555 }
-/* GenericStrong */ .chroma .gs { font-weight: bold }
-/* GenericSubheading */ .chroma .gu { color: #aaaaaa }
-/* GenericTraceback */ .chroma .gt { color: #aa0000 }
-/* GenericUnderline */ .chroma .gl { text-decoration: underline }
-/* TextWhitespace */ .chroma .w { color: #bbbbbb }
-
-    }
-
-
-@media (prefers-reduced-motion: reduce) {
-    .paige-header-link {
-        transition: none;
-    }
-}
+    
 
 
 
 
-</style>
+
+
+
+
+
+
+
 
 
     
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
 </head>
 
     <body>
 
+
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
 
         <div class="container">
             <div class="row">
-                <div class="col mt-3" id="paige-site">
+                <div class="col mt-3" id="paige-site" >
                     
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
                     
+
 
 
 
@@ -505,99 +526,168 @@ table {
     <header id="paige-site-header">
         
 
-        
-            <div class="display-1 fw-bold  mb-2  paige-row-wide text-center" id="paige-site-title">Field Genomics Workshop</div>
-        
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
 
         
-            <div class="lead paige-row-wide text-center" id="paige-site-description">Guatemala 2026</div>
+
         
 
         
             
-                <nav aria-label="Menu" class="paige-row-wide" id="paige-menu">
+                <nav aria-label="Menu" class="paige-row-tall" id="paige-site-menu">
                     <ul class="align-items-center justify-content-center nav ">
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a   class="  nav-link   text-decoration-underline "  href="../"    >Home</a>
+                                <a   class="  nav-link   text-decoration-underline "  href="../"   ZgotmplZ >Home</a>
 
                                 
                             </li>
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a   class="  nav-link   text-decoration-underline "  href="../getting-ready/"    >Getting Ready</a>
+                                <a   class="  nav-link   text-decoration-underline "  href="../getting-ready/"   ZgotmplZ >Getting Ready</a>
 
                                 
                             </li>
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a   class="  nav-link   text-decoration-underline "  href="../slides/"    >Workshop Slides</a>
+                                <a   class="  nav-link   text-decoration-underline "  href="../slides/"   ZgotmplZ >Workshop Slides</a>
 
                                 
                             </li>
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a  aria-current="page"   class=" active  fw-bold text-body-emphasis    nav-link   text-decoration-underline "  href="../workflows/"    >Workflows</a>
+                                <a  aria-current="page"   class=" active  fw-bold text-body    nav-link   text-decoration-underline "  href="../workflows/"   ZgotmplZ >Workflows</a>
 
                                 
                             </li>
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a   class="  nav-link   text-decoration-underline "  href="../replicate-this-workshop/"    >Replicate this Workshop</a>
+                                <a   class="  nav-link   text-decoration-underline "  href="../replicate-this-workshop/"   ZgotmplZ >Replicate this Workshop</a>
 
                                 
                             </li>
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a   class="  nav-link   text-decoration-underline "  href="../contactus/"    >Contact Us</a>
+                                <a   class="  nav-link   text-decoration-underline "  href="../contactus/"   ZgotmplZ >Contact Us</a>
 
                                 
                             </li>
                         
                             
-                            
+
                             
                             
                             
 
+                            
+
                             <li class="nav-item ">
-                                <a   class="  nav-link   text-decoration-underline "  href="../gallery/"    >Gallery</a>
+                                <a   class="  nav-link   text-decoration-underline "  href="../gallery/"   ZgotmplZ >Gallery</a>
 
                                 
                             </li>
@@ -610,6 +700,65 @@ table {
         
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
     </header>
 
 
@@ -634,6 +783,8 @@ table {
 
 
 
+
+
     
 
 
@@ -645,8 +796,91 @@ table {
 
 
 
-<article class="paige-kind-section paige-published" id="paige-page">
-    <div class="align-items-center d-flex flex-column">
+<article class=" align-items-center d-flex flex-column  paige-kind-section paige-status-published" id="paige-page">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <header class="mw-100 text-center" id="paige-page-header">
         
 
 
@@ -661,6 +895,152 @@ table {
 
 
 
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
+
+        
+            <h1 class="fw-bold" id="paige-page-title" >Nanopore workflow</h1>
+        
+
+        
+
+        
+            <div>
+                
+
+                
+
+                
+
+                
+
+                
+                    <p class="paige-row-short text-secondary" id="paige-page-word-count" >4675 words</p>
+                
+
+                
+                    <p class="paige-row-short text-secondary" id="paige-page-reading-time" >22 minutes</p>
+                
+            </div>
+        
+
+        
+
+        
+            <div class="align-items-center d-flex flex-column paige-row-tall text-start" id="paige-page-toc">
+                <div class="border rounded" style="padding: 1rem 2rem 0 1rem">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#table-of-contents">Table of Contents</a></li>
+    <li><a href="#molecular-procedures">Molecular Procedures</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#step-1-getting-started">Step 1: Getting Started</a></li>
+    <li><a href="#step-2-burrows-wheeler-aligner-bwa">Step 2: Burrows-Wheeler Aligner (BWA)</a>
+      <ol>
+        <li><a href="#variables">Variables:</a></li>
+        <li><a href="#code">Code:</a></li>
+      </ol>
+    </li>
+    <li><a href="#step-3-align-nanopore-reads-to-a-reference-genome">Step 3: Align Nanopore Reads to a Reference Genome</a>
+      <ol>
+        <li><a href="#variables-1">Variables:</a></li>
+        <li><a href="#code-1">Code:</a></li>
+      </ol>
+    </li>
+    <li><a href="#step-4-remove-host-sequence-data">Step 4: Remove Host Sequence Data</a>
+      <ol>
+        <li><a href="#variables-2">Variables:</a></li>
+        <li><a href="#code-2">Code:</a></li>
+      </ol>
+    </li>
+    <li><a href="#step-5-basic-local-alignment-search-tool-blast">Step 5: Basic Local Alignment Search Tool (BLAST)</a>
+      <ol>
+        <li><a href="#code-3">Code:</a>
+          <ol>
+            <li><a href="#create-blast-database">Create BLAST Database:</a></li>
+            <li><a href="#run-blast-query">Run BLAST Query:</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#step-6-summarize-the-results">Step 6: Summarize the Results</a>
+      <ol>
+        <li><a href="#separating-sequences-with-high-percentage-matching">Separating sequences with high percentage matching</a></li>
+        <li><a href="#step-7-explore-results-on-ncbi-blast-online">Step 7: Explore results on NCBI-BLAST (online)</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#1-basecalling">1. Basecalling</a></li>
+    <li><a href="#2-align-bam-files-to-a-reference-genome">2. Align BAM Files to a Reference Genome</a></li>
+    <li><a href="#3-extracting-unaligned-reads">3. Extracting Unaligned Reads</a></li>
+    <li><a href="#4-renaming-sequence-ids-before-database-creation">4. Renaming Sequence IDs Before Database Creation</a></li>
+    <li><a href="#5-creating-a-blast-database">5. Creating a BLAST Database</a></li>
+    <li><a href="#6-converting-bam-to-fasta">6. Converting BAM to FASTA</a></li>
+    <li><a href="#7-running-blast-on-fasta-files">7. Running BLAST on FASTA Files</a></li>
+    <li><a href="#8-renaming-sequence-ids-in-blast-results">8. Renaming Sequence IDs in BLAST Results</a></li>
+    <li><a href="#1-basecalling-1">1. Basecalling</a></li>
+    <li><a href="#2-convert-each-bam-file-to-a-fasta-format">2. Convert each BAM file to a FASTA format</a></li>
+    <li><a href="#2-run-flye">2. Run Flye</a></li>
+    <li><a href="#3-align-your-mitochondrial-genomes-using-dorado">3. Align your mitochondrial genomes using Dorado</a></li>
+    <li><a href="#create-a-consensus-sequence-using-samtools">Create a Consensus Sequence using samtools</a></li>
+    <li><a href="#4-converting-our-consensus-sequence-into-a-format-for-alignment">4. Converting our consensus sequence into a format for alignment</a></li>
+    <li><a href="#5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree">5. Use MEGA to bring in concatanated fasta file, align the sequences, and build a tree</a></li>
+  </ol>
+</nav>
+                </div>
+            </div>
+        
+
+        
 
 
 
@@ -668,39 +1048,171 @@ table {
 
 
 
-    <header class="mw-100" id="paige-page-header">
-        <div class="align-items-center d-flex flex-column">
-            
 
-            
-                <h1 class="fw-bold" id="paige-page-title">Nanopore workflow</h1>
-            
 
-            
 
-            
 
-            
 
-            
 
-            
-        </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
     </header>
 
 
 
+    <main class="mw-100" id="paige-page-content" >
         
-            <main class="mw-100" id="paige-content"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
+
+        
+            </div>
 <hr>
-<h2 id="table-of-contents">Table of Contents<a aria-label="Link to this section" class="paige-header-link" href="#table-of-contents"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="table-of-contents" >
+    <a href="#table-of-contents" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Table of Contents</a>
+</h2>
 <ul>
 <li><a href="#molecular-procedures">Molecular Procedures</a></li>
 <li><a href="#worked-example">Worked Example</a></li>
 <li><a href="#real-time-example">Real-Time Example</a></li>
 </ul>
 <br>
-<h2 id="molecular-procedures">Molecular Procedures<a aria-label="Link to this section" class="paige-header-link" href="#molecular-procedures"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="molecular-procedures" >
+    <a href="#molecular-procedures" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Molecular Procedures</a>
+</h2>
 <!-- Buttons to toggle sections -->
 <div style="text-align: center; margin-bottom: 20px;">
   <button onclick="toggleSection('dnaExtraction')"> DNA Extraction</button>
@@ -761,14 +1273,53 @@ pre code {
 </style>
 <br>
 <hr>
-<h1 id="worked-example">Worked Example<a aria-label="Link to this section" class="paige-header-link" href="#worked-example"></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1  id="worked-example" >
+    <a href="#worked-example" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Worked Example</a>
+</h1>
 <div style="text-align: justify;">
 The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, <i>Ixodes scapularis</i>. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (<i>Borellia burgdorferi</i>; <i>Borella miyamotoi</i>; <i>Anaplasma phagocytophilum</i>; and <i>Eherlichia muris</i>) from 8 female <i>I. scapularis</i> ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data.
 <p>For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop.
-The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in <a href="https://www.nature.com/articles/s41598-023-37134-9">Kipp et al. (2023)</a>.</p>
-<p>Before starting with Step 1: (1) install the <a href="../programs">Required Software</a>.   (2) make sure you have downloaded Kipp&rsquo;s data as instructed in <a href="../getting-ready">Getting Ready</a>.</p>
+The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in <a  href="https://www.nature.com/articles/s41598-023-37134-9"   rel="external"   >Kipp et al. (2023)</a>
+.</p>
+<p>Before starting with Step 1: (1) install the <a  href="../programs"    >Required Software</a>
+.   (2) make sure you have downloaded Kipp&rsquo;s data as instructed in <a  href="../getting-ready"    >Getting Ready</a>
+.</p>
 <br>
-<h2 id="step-1-getting-started">Step 1: Getting Started<a aria-label="Link to this section" class="paige-header-link" href="#step-1-getting-started"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="step-1-getting-started" >
+    <a href="#step-1-getting-started" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 1: Getting Started</a>
+</h2>
 <p>In this step, we are using basic Linux commands to establish our file/folder structure. Mac and Linux users may open a terminal. Windows users should open their Ubuntu terminal via WSL.</p>
 <p>Print your working directory (i.e., determine where your terminal window is located within the file structure of your computer):
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">pwd</span>  <span class="c1"># type this command and hit enter</span></span></span></code></pre></div></p>
@@ -787,7 +1338,8 @@ The goal of this process is to use NAS for real-time metagenomic surveillance, t
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir blast_database</span></span></code></pre></div></p>
 <p>Create a fourth subdirectory to summarize results from the example:
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir summary_example</span></span></code></pre></div></p>
-<p>Copy or move the 3 data files from <a href="../getting-ready">Getting Ready</a> into the data_example/ directory.
+<p>Copy or move the 3 data files from <a  href="../getting-ready"    >Getting Ready</a>
+ into the data_example/ directory.
 This can be done in a File Manager or Finder window via drag-and-drop or via the command line.
 Ensure that the files downloaded are named as follows, as sometimes downloading/extracting zip files from Google Drive can change file names:</p>
 <ul>
@@ -807,13 +1359,68 @@ Ensure that the files downloaded are named as follows, as sometimes downloading/
 </span></span><span class="line"><span class="cl">mv Kipp_etal_* &lt;YOUR_PATH&gt;/field_genomics/
 </span></span></code></pre></div><p><strong>Note</strong>: For Windows users, ensure that your computer does not suspend while running analyses. You need to repace <code>&lt;YOUR_PATH&gt;</code> with the output of your <code>pwd</code> command from above.</p>
 <br>
-<h2 id="step-2-burrows-wheeler-aligner-bwa">Step 2: Burrows-Wheeler Aligner (BWA)<a aria-label="Link to this section" class="paige-header-link" href="#step-2-burrows-wheeler-aligner-bwa"></a></h2>
-<p><a href="https://github.com/lh3/bwa">Burrows-Wheeler Alignment</a> (BWA) is a software package that is used to align reads to a reference genome. First, we must index the reference genome. Indexing a reference genome is a process that speeds up sequence alignment by creating a data structure, allowing rapid matching of DNA sequences (reads) to the reference genome. This is how to index a reference genome:</p>
-<h3 id="variables">Variables:<a aria-label="Link to this section" class="paige-header-link" href="#variables"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="step-2-burrows-wheeler-aligner-bwa" >
+    <a href="#step-2-burrows-wheeler-aligner-bwa" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 2: Burrows-Wheeler Aligner (BWA)</a>
+</h2>
+<p><a  href="https://github.com/lh3/bwa"   rel="external"   >Burrows-Wheeler Alignment</a>
+ (BWA) is a software package that is used to align reads to a reference genome. First, we must index the reference genome. Indexing a reference genome is a process that speeds up sequence alignment by creating a data structure, allowing rapid matching of DNA sequences (reads) to the reference genome. This is how to index a reference genome:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="variables" >
+    <a href="#variables" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Variables:</a>
+</h3>
 <ul>
 <li><strong>Reference Genome Path</strong>: <code>data_example/Kipp_etal_depletion_reference.fasta</code></li>
 </ul>
-<h3 id="code">Code:<a aria-label="Link to this section" class="paige-header-link" href="#code"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="code" >
+    <a href="#code" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Code:</a>
+</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bwa index data_example/Kipp_etal_depletion_reference.fasta</span></span></code></pre></div>
 <br>
 <ol>
@@ -838,45 +1445,211 @@ GCTAGCTAGCTAGCTGATCGTACG
 </li>
 </ol>
 <br>
-<h2 id="step-3-align-nanopore-reads-to-a-reference-genome">Step 3: Align Nanopore Reads to a Reference Genome<a aria-label="Link to this section" class="paige-header-link" href="#step-3-align-nanopore-reads-to-a-reference-genome"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="step-3-align-nanopore-reads-to-a-reference-genome" >
+    <a href="#step-3-align-nanopore-reads-to-a-reference-genome" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 3: Align Nanopore Reads to a Reference Genome</a>
+</h2>
 <p><strong>Description</strong>:
-This step aligns the Nanopore sequencing reads to the reference genome. BWA-MEM is the algorithm in BWA that is best for aligning long reads (70bp or more).  <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM</a> files (the ouput file format of this step) are a formatted, plain-text file that contains aligment information for sequences mapped to a reference. SAM files can also contain unmapped sequences.</p>
+This step aligns the Nanopore sequencing reads to the reference genome. BWA-MEM is the algorithm in BWA that is best for aligning long reads (70bp or more).  <a  href="https://samtools.github.io/hts-specs/SAMv1.pdf"   rel="external"   >SAM</a>
+ files (the ouput file format of this step) are a formatted, plain-text file that contains aligment information for sequences mapped to a reference. SAM files can also contain unmapped sequences.</p>
 <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;"> <img src="../procedures/mapping.png" alt="Alignment Process" style="max-width: 100%; height: auto;"/> </div>
-<p>Photo credit: <a href="https://usegalaxy.org/">Galaxy</a></p>
-<h3 id="variables-1">Variables:<a aria-label="Link to this section" class="paige-header-link" href="#variables-1"></a></h3>
+<p>Photo credit: <a  href="https://usegalaxy.org/"   rel="external"   >Galaxy</a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="variables-1" >
+    <a href="#variables-1" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Variables:</a>
+</h3>
 <ul>
 <li><strong>Reference Genome Path</strong>: <code>data_example/Kipp_etal_depletion_reference.fasta</code></li>
 <li><strong>Nanopore Sequences Path</strong>: <code>data_example/SRR17281099.fasta.gz</code></li>
 <li><strong>Output SAM File Path</strong>: <code>output_example/Kipp_etal_alig_depletion.sam</code></li>
 </ul>
-<h3 id="code-1">Code:<a aria-label="Link to this section" class="paige-header-link" href="#code-1"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="code-1" >
+    <a href="#code-1" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Code:</a>
+</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#template command for Nanopore reads: bwa mem -x ont2d &lt;reference_genome.fasta&gt; &lt;raw_reads.fasta.gz&gt; &lt;output.sam&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">bwa mem -x ont2d data_example/Kipp_etal_depletion_reference.fasta data_example/SRR17281099.fasta.gz &gt; output_example/Kipp_etal_alig_depletion.sam
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># -x is a flag to specify specialized alignment stratagies, in this case, ont2d = Oxford Nanopore Reads</span></span></span></code></pre></div>
 <br>
-<h2 id="step-4-remove-host-sequence-data">Step 4: Remove Host Sequence Data<a aria-label="Link to this section" class="paige-header-link" href="#step-4-remove-host-sequence-data"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="step-4-remove-host-sequence-data" >
+    <a href="#step-4-remove-host-sequence-data" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 4: Remove Host Sequence Data</a>
+</h2>
 <p><strong>Description</strong>:
 Here, we remove reads that mapped to the host genome, retaining only unmapped sequences in a separate fasta file. These sequences represent reads that are NOT the host (e.g., bacterial DNA, fungal DNA, contamination, etc.).</p>
-<h3 id="variables-2">Variables:<a aria-label="Link to this section" class="paige-header-link" href="#variables-2"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="variables-2" >
+    <a href="#variables-2" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Variables:</a>
+</h3>
 <ul>
 <li><strong>Input SAM File Path</strong>: <code>output_example/Kipp_etal_alig_depletion.sam</code></li>
 <li><strong>Output Unmapped Reads Path</strong>: <code>output_example/Kipp_etal_unmapped_depletion.fasta</code></li>
 </ul>
-<h3 id="code-2">Code:<a aria-label="Link to this section" class="paige-header-link" href="#code-2"></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="code-2" >
+    <a href="#code-2" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Code:</a>
+</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">samtools fasta -f <span class="m">4</span> output_example/Kipp_etal_alig_depletion.sam &gt; output_example/Kipp_etal_unmapped_depletion.fasta
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#samtools -f is a flag that means &#34;flag.&#34; In this case, we specify 4, which translates to filter that fasta file to keep only unmapped sequences</span></span></span></code></pre></div>
 <br>
 <p><strong>Description</strong>:
-<a href="https://www.htslib.org/">samtools</a> is a suite of programs used for interacting with high-throughput sequencing data. It consists of samtools, BCFtools, and HTSlib.</p>
+<a  href="https://www.htslib.org/"   rel="external"   >samtools</a>
+ is a suite of programs used for interacting with high-throughput sequencing data. It consists of samtools, BCFtools, and HTSlib.</p>
 <br>
-<h2 id="step-5-basic-local-alignment-search-tool-blast">Step 5: Basic Local Alignment Search Tool (BLAST)<a aria-label="Link to this section" class="paige-header-link" href="#step-5-basic-local-alignment-search-tool-blast"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="step-5-basic-local-alignment-search-tool-blast" >
+    <a href="#step-5-basic-local-alignment-search-tool-blast" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 5: Basic Local Alignment Search Tool (BLAST)</a>
+</h2>
 <p><strong>Description</strong>:
-Next, we want to build a local database of tick-borne pathogen sequences. We will then compare our unaligned Nanopore reads to that database of reference pathogen sequences and use the percent identity (or percent similarity) to determine which pathogens are present in the Nanopore sequence data. We will use National Center for Biotechnology Information&rsquo;s (NCBI) BLAST (Basic Local Alignment Search Tool) tool to both (1) build the local database of know pathogens and (2) compare our data to it. The pathogen sequences used to build the reference database can be mined from GenBank/SRA, DDBJ, EuPathDB, or other sequence databases. Here, we build a database from the enrichment fasta file from Kipp et al. (2023) that contains 52 partial or complete genomes of tick-borne pathogens (see their <a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-023-37134-9/MediaObjects/41598_2023_37134_MOESM1_ESM.pdf">Supplementary Table 1</a>).</p>
-<h3 id="code-3">Code:<a aria-label="Link to this section" class="paige-header-link" href="#code-3"></a></h3>
-<h4 id="create-blast-database">Create BLAST Database:<a aria-label="Link to this section" class="paige-header-link" href="#create-blast-database"></a></h4>
+Next, we want to build a local database of tick-borne pathogen sequences. We will then compare our unaligned Nanopore reads to that database of reference pathogen sequences and use the percent identity (or percent similarity) to determine which pathogens are present in the Nanopore sequence data. We will use National Center for Biotechnology Information&rsquo;s (NCBI) BLAST (Basic Local Alignment Search Tool) tool to both (1) build the local database of know pathogens and (2) compare our data to it. The pathogen sequences used to build the reference database can be mined from GenBank/SRA, DDBJ, EuPathDB, or other sequence databases. Here, we build a database from the enrichment fasta file from Kipp et al. (2023) that contains 52 partial or complete genomes of tick-borne pathogens (see their <a  href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-023-37134-9/MediaObjects/41598_2023_37134_MOESM1_ESM.pdf"   rel="external"   >Supplementary Table 1</a>
+).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="code-3" >
+    <a href="#code-3" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Code:</a>
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4  id="create-blast-database" >
+    <a href="#create-blast-database" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Create BLAST Database:</a>
+</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">makeblastdb -in data_example/Kipp_etal_enrichment_reference.fasta -parse_seqids -blastdb_version <span class="m">5</span> -title <span class="s2">&#34;Kipp_etal_enrichment&#34;</span> -dbtype nucl -out blast_database/Kipp_etal_enrichment_reference
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#-blastdb_version 5 = Version of blastdb you would like. Version 5 (taxonomy aware) is the default starting with the 2.10.0 release. Value must be 4 or 5.</span>
@@ -886,7 +1659,25 @@ Next, we want to build a local database of tick-borne pathogen sequences. We wil
 <p><strong>Description</strong>:
 The above line of code creates a local BLAST database from the sequences in Kipp et al.&rsquo;s (2023) enrichment fasta file. This database will be used as a reference against which we can compare our Nanopore sequence data to determine what pathogens are present in the sample.</p>
 <br>
-<h4 id="run-blast-query">Run BLAST Query:<a aria-label="Link to this section" class="paige-header-link" href="#run-blast-query"></a></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4  id="run-blast-query" >
+    <a href="#run-blast-query" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Run BLAST Query:</a>
+</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">blastn -query output_example/Kipp_etal_unmapped_depletion.fasta -db blast_database/Kipp_etal_enrichment_reference -out output_example/Kipp_etal_blast_results.txt</span></span></code></pre></div>
 <br>
 <p><strong>Description</strong>:
@@ -898,7 +1689,25 @@ This step uses the BLAST algorithm to search for each unmapped Nanopore sequence
 </span></span></code></pre></div><p>BLASTn tabular output format 6 guide:</p>
 <img src="../results/blasttab.jpg" alt="Alignment Process" style="max-width: 50%; height: auto; display: block; margin: 0 auto;"/>
 <br> 
-<h2 id="step-6-summarize-the-results">Step 6: Summarize the Results<a aria-label="Link to this section" class="paige-header-link" href="#step-6-summarize-the-results"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="step-6-summarize-the-results" >
+    <a href="#step-6-summarize-the-results" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 6: Summarize the Results</a>
+</h2>
 <p>Here, we can take a look at what a small part of our default BLAST query output looks like:</p>
 <img src="../results/blast4.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
 <br>
@@ -970,7 +1779,25 @@ Filter matches output from BLAST to retain only the query sequences that matched
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># cut -f1 extracts the first field from the input file (e.g., HEADERS or individual read IDs), sorts all header names alphanumerically, and removes duplicates</span>
 </span></span><span class="line"><span class="cl">	<span class="c1"># cut -f2 extracts the second field from the input file (e.g., SUBJECTS or where the read hit), sorts all subject names alphanumerical, and removes duplicates</span>
-</span></span></code></pre></div><h3 id="separating-sequences-with-high-percentage-matching">Separating sequences with high percentage matching<a aria-label="Link to this section" class="paige-header-link" href="#separating-sequences-with-high-percentage-matching"></a></h3>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="separating-sequences-with-high-percentage-matching" >
+    <a href="#separating-sequences-with-high-percentage-matching" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Separating sequences with high percentage matching</a>
+</h3>
 <p>Initial steps to list the headers of sequences needed:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">zcat data_example/SRR17281099.fasta.gz &gt; data_example/SRR17281099.fasta
 </span></span><span class="line"><span class="cl">
@@ -983,25 +1810,83 @@ Filter matches output from BLAST to retain only the query sequences that matched
 </span></span><span class="line"><span class="cl"><span class="nv">headers</span><span class="o">=</span><span class="sb">`</span>cat summary_example/Kipp_etal_high_hit_headers.txt<span class="sb">`</span>
 </span></span></code></pre></div><p>Obtaining the subset of high perecentage matching sequences from the whole set of sequences.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">samtools faidx data_example/SRR17281099.fasta <span class="nv">$headers</span> &gt; summary_example/Kipp_etal_high_hit_sequences.fasta
-</span></span></code></pre></div><h3 id="step-7-explore-results-on-ncbi-blast-online">Step 7: Explore results on NCBI-BLAST (online)<a aria-label="Link to this section" class="paige-header-link" href="#step-7-explore-results-on-ncbi-blast-online"></a></h3>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="step-7-explore-results-on-ncbi-blast-online" >
+    <a href="#step-7-explore-results-on-ncbi-blast-online" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Step 7: Explore results on NCBI-BLAST (online)</a>
+</h3>
 <p>Below is a graph of the number of hits per reference pathogen sequence. Clearly, one sequence (<code>NC_021880.1_An_ph_str._JM</code>) is more common than the others.</p>
 <img src="../results/hitsperwindows.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
 <p>As an example, below a screenshot of the <code>Kipp_etal_blast_results_table.txt</code> output file. The data has been filtered based on % Match (e.g., percent identity) &gt;97% and sorted by descending read length. The longest, high-quality match was also from <code>NC_021990.1_An_ph_str._JM</code>. Many of the reads are 200bp or less, and while they may have a higher % Match, the longer reads tend to have higher E value scores, thus are more informative for comparisons to the entire NCBI database.</p>
 <img src="../results/results2.png" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
 <p>Next, copy the read name associated with the longest, highest-quality match (<code>SRR17281099.418555</code>). Open the text file <code>Kipp_etal_high_hit_sequences.fasta</code> and use <code>Ctrl-F</code> to find that read in the file.:</p>
 <img src="../results/finder.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
-<p>Once you&rsquo;ve located that read in the <code>Kipp_etal_high_hit_sequences.fasta</code> file, copy the sequence and paste the sequence into <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome">NCBI BLAST</a> online (Enter accession number(s), gi(s), or FASTA sequence(s) box in the upper left corner) and press <code>search</code>. This will return similar sequences in GenBank, displayed as shown in the image below:</p>
+<p>Once you&rsquo;ve located that read in the <code>Kipp_etal_high_hit_sequences.fasta</code> file, copy the sequence and paste the sequence into <a  href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&amp;PAGE_TYPE=BlastSearch&amp;LINK_LOC=blasthome"   rel="external"   >NCBI BLAST</a>
+ online (Enter accession number(s), gi(s), or FASTA sequence(s) box in the upper left corner) and press <code>search</code>. This will return similar sequences in GenBank, displayed as shown in the image below:</p>
 <p>First, we paste out sequence into the nucleotide box:
 <img src="../results/blast1.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/></p>
 <p>After searching, a results pane will show you results similar to what we had on the command line, but in a different format. In the top right panel, we can filter our hits by organism, percent identity, E value, and Query Coverage. The bottom panel shows all of the hits, sorted by E value by default. More information about each sequence that hit can be found by clicking the name in the Description column. There are also many options for viewing the alignments, such as in the Graphic Summary and Alignments tabs, or by clicking MSA viewer.</p>
 <img src="../results/blast2.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
 <p>NCBI has a neat feature where you can view how your sequence (highlighted in yellow) compares to other uploaded sequences:</p>
 <img src="../results/blast3.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
-<h3 id="conclusion">Conclusion<a aria-label="Link to this section" class="paige-header-link" href="#conclusion"></a></h3>
-<p>In this case, we can see that our longest read maps near-perfectly to a portion of an <a href="https://www.ncbi.nlm.nih.gov/nuccore/CP000235.1">Anaplasma phagocytophilum reference genome</a>, a Gram-negative bacterium that causes multiple diseases in cattle and sheep, as well as zoonoses like <a href="https://www.ncbi.nlm.nih.gov/books/NBK513341/">human granulocytic anaplasmosis.</a> This result is consistent to those of Kip et. al 2023, which found evidence of the same bacteria in their approach that used the <a href="https://github.com/DerrickWood/kraken2">kraken2</a> package for metagenomic classification.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3  id="conclusion" >
+    <a href="#conclusion" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Conclusion</a>
+</h3>
+<p>In this case, we can see that our longest read maps near-perfectly to a portion of an <a  href="https://www.ncbi.nlm.nih.gov/nuccore/CP000235.1"   rel="external"   >Anaplasma phagocytophilum reference genome</a>
+, a Gram-negative bacterium that causes multiple diseases in cattle and sheep, as well as zoonoses like <a  href="https://www.ncbi.nlm.nih.gov/books/NBK513341/"   rel="external"   >human granulocytic anaplasmosis.</a>
+ This result is consistent to those of Kip et. al 2023, which found evidence of the same bacteria in their approach that used the <a  href="https://github.com/DerrickWood/kraken2"   rel="external"   >kraken2</a>
+ package for metagenomic classification.</p>
 <br>
 <hr>
-<h1 id="real-time-example">Real-Time Example<a aria-label="Link to this section" class="paige-header-link" href="#real-time-example"></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1  id="real-time-example" >
+    <a href="#real-time-example" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Real-Time Example</a>
+</h1>
 <p><strong>Description:</strong>
 This section contains all of the code we will use to analyze the Nanopore sequence data generated during this workshop. This is not part of the worked example (above).
 <br></p>
@@ -1040,7 +1925,25 @@ This section contains all of the code we will use to analyze the Nanopore sequen
 <!-- Windows (With Ubuntu) / Linux Installation Section -->
 <div id="windows" style="display:none;">
 <h2> Depletion of host genomes for bacterial and fungal pathogen identification  </h2>
-<h2 id="1-basecalling">1. Basecalling<a aria-label="Link to this section" class="paige-header-link" href="#1-basecalling"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="1-basecalling" >
+    <a href="#1-basecalling" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">1. Basecalling</a>
+</h2>
 <p><strong>Description:</strong>
 Basecalling is the process of determining the sequence of nucleotide bases from the raw data generated by the sequencer. For Nanopore sequencing, basecalling involves interpreting changes in electral current as single-stranded DNA (or RNA) passes through the Nanopore. Current fluctuations correspond to different nucleotide bases which are decoded into <span style="color: #ff0000;">A&rsquo;s</span>,
 <span style="color: #00ff00;">G&rsquo;s</span>,
@@ -1048,9 +1951,10 @@ Basecalling is the process of determining the sequence of nucleotide bases from 
 and <span style="color: #ffa500;">C&rsquo;s</span> by the dorado basecalling software.</p>
 <p>Bash is a scripting language that XYZ. We can bundle multiple commands together into a script (.sh) file, which is just a plain-text file that can be interpreted and executed by the computer. The code block below contains all of the text in the script file. All Bash scripts must begin with <code>#! /binbash/</code> as that line tells the computer where to find the Bash program/executable. Then, variables are defined (base_dir, output_dir, dorado) to make the actual code easier to read.</p>
 <p>The code below runs the dorado basecaller on each barcdoe (1 through 24) and produces an output BAM file for each, respectively.</p>
-<p><a href="../scripts/01_basecall.sh"><code>Download 01_basecall.sh</code></a></p>
+<p><a  href="../scripts/01_basecall.sh"    ><code>Download 01_basecall.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Base directory for pod5 files</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Base directory for pod5 files</span>
 </span></span><span class="line"><span class="cl"><span class="nv">base_dir</span><span class="o">=</span><span class="s2">&#34;/Library/MinKNOW/data/Ecuador_Workshop_Training_Pathogens_Pero/no_sample/20240913_1820_MN40667_FAY96875_60fc85db/pod5_pass&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Output directory for basecalling results</span>
@@ -1070,20 +1974,41 @@ and <span style="color: #ffa500;">C&rsquo;s</span> by the dorado basecalling sof
 </span></span><span class="line"><span class="cl"><span class="k">do</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$dorado</span> basecaller dna_r10.4.1_e8.2_400bps_fast@v5.0.0 <span class="s2">&#34;</span><span class="nv">$base_dir</span><span class="s2">/</span><span class="nv">$barcode</span><span class="s2">/&#34;</span> &gt; <span class="s2">&#34;</span><span class="nv">$output_dir</span><span class="s2">/</span><span class="si">${</span><span class="nv">barcode</span><span class="si">}</span><span class="s2">.bam&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
-<p>Names of Dorado models (i.e., Here, we use the basecaller model <a href="https://github.com/nanoporetech/dorado?tab=readme-ov-file#dna-models"><code>dna_r10.4.1_e8.2_400bps_fast@5.0.0</code></a>. Dorado model names are systematically structured, such that each segment corresponds to a different aspect of the model:</p>
+<p>Names of Dorado models (i.e., Here, we use the basecaller model <a  href="https://github.com/nanoporetech/dorado?tab=readme-ov-file#dna-models"   rel="external"   ><code>dna_r10.4.1_e8.2_400bps_fast@5.0.0</code></a>
+. Dorado model names are systematically structured, such that each segment corresponds to a different aspect of the model:</p>
 <p><strong>Analyte Type (dna)</strong>: This denotes the type of analyte being sequenced. For DNA sequencing, it is represented as dna. If you are using a Direct RNA Sequencing Kit, this will be rna002 or rna004, depending on the kit.</p>
 <p><strong>Pore Type (r10.4.1)</strong>: This section corresponds to the type of flow cell used. For instance, FLO-MIN114/FLO-FLG114 is indicated by r10.4.1, while FLO-MIN106D/FLO-FLG001 is signified by r9.4.1.</p>
 <p><strong>Chemistry Type (e8.2)</strong>: This represents the chemistry type, which corresponds to the kit used for sequencing. For example, Kit 14 chemistry is denoted by e8.2 and Kit 10 or Kit 9 are denoted by e8.</p>
 <p><strong>Translocation Speed (400bps)</strong>: This parameter, selected at the run setup in MinKNOW, refers to the speed of translocation. Prior to starting your run, a prompt will ask if you prefer to run at 260 bps or 400 bps. The former yields more accurate results but provides less data. As of MinKNOW version 23.04, the 260 bps option has been deprecated.</p>
 <p><strong>Model Type (hac)</strong>: This represents the size of the model, where larger models yield more accurate basecalls but take more time. The three types of models are fast, hac, and sup. The fast model is the quickest, sup is the most accurate, and hac provides a balance between speed and accuracy. For most users, the hac model is recommended.</p>
 <p><strong>Model Version Number (v5.0.0)</strong>: This denotes the version of the model. Model updates are regularly released, and higher version numbers typically signify greater accuracy.
-For more details on decoding dorado model names see <a href="https://github.com/nanoporetech/dorado">here</a>.</p>
+For more details on decoding dorado model names see <a  href="https://github.com/nanoporetech/dorado"   rel="external"   >here</a>
+.</p>
 <br>
-<h2 id="2-align-bam-files-to-a-reference-genome">2. Align BAM Files to a Reference Genome<a aria-label="Link to this section" class="paige-header-link" href="#2-align-bam-files-to-a-reference-genome"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="2-align-bam-files-to-a-reference-genome" >
+    <a href="#2-align-bam-files-to-a-reference-genome" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">2. Align BAM Files to a Reference Genome</a>
+</h2>
 <p>In this step, we align Nanopore reads to a reference genome. BAM files contain the same information as a SAM file, but in binary format which is not human readable. BAM files are generally smaller, however, and are therefore more efficient for software to work with. Alignment data is almost always stored as a BAM file and most software that analyzes aligned reads expects a BAM file as input.</p>
-<p><a href="../scripts/02align.sh"><code>Download 02_align.sh</code></a></p>
+<p><a  href="../scripts/02align.sh"    ><code>Download 02_align.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Path to the reference genome</span>
 </span></span><span class="line"><span class="cl"><span class="nv">REFERENCE_PATH</span><span class="o">=</span><span class="s2">&#34;/Library/MinKNOW/data/References/Ecusdor_ref/pema_only_09092024.fasta&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -1106,11 +2031,30 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Finished aligning barcode</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">.bam&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <br>
-<h2 id="3-extracting-unaligned-reads">3. Extracting Unaligned Reads<a aria-label="Link to this section" class="paige-header-link" href="#3-extracting-unaligned-reads"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="3-extracting-unaligned-reads" >
+    <a href="#3-extracting-unaligned-reads" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">3. Extracting Unaligned Reads</a>
+</h2>
 <p>Next, we extract the unaligned reads from the BAM files using <code>samtools</code>. This step is crucial for isolating reads that did not align to the reference genome, allowing us to focus on non-host sequences.</p>
-<p><a href="../scripts/03_unmapped_reads.sh"><code>Download 03_unmapped_reads.sh</code></a></p>
+<p><a  href="../scripts/03_unmapped_reads.sh"    ><code>Download 03_unmapped_reads.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Path to samtools (ensure samtools is installed and accessible in your PATH)</span>
 </span></span><span class="line"><span class="cl"><span class="nv">SAMTOOLS_PATH</span><span class="o">=</span><span class="s2">&#34;/opt/homebrew/bin/samtools&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -1133,11 +2077,30 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Finished extracting unaligned reads for barcode</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">.bam&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <br>
-<h2 id="4-renaming-sequence-ids-before-database-creation">4. Renaming Sequence IDs Before Database Creation<a aria-label="Link to this section" class="paige-header-link" href="#4-renaming-sequence-ids-before-database-creation"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="4-renaming-sequence-ids-before-database-creation" >
+    <a href="#4-renaming-sequence-ids-before-database-creation" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">4. Renaming Sequence IDs Before Database Creation</a>
+</h2>
 <p>Before creating the BLAST database, we rename the sequence IDs in the FASTA file to ensure uniqueness and compatibility. This step is essential for maintaining consistency in downstream analyses.</p>
-<p><a href="../scripts/03.5_shorten_fasta_header.sh"><code>Download 03.5_shorten_fasta_header.sh</code></a></p>
+<p><a  href="../scripts/03.5_shorten_fasta_header.sh"    ><code>Download 03.5_shorten_fasta_header.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">awk <span class="s1">&#39;
 </span></span></span><span class="line"><span class="cl"><span class="s1">BEGIN {FS=&#34; &#34;; OFS=&#34; &#34;} 
 </span></span></span><span class="line"><span class="cl"><span class="s1">/^&gt;/ {
@@ -1151,22 +2114,60 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span></span><span class="line"><span class="cl"><span class="s1">}
 </span></span></span><span class="line"><span class="cl"><span class="s1">{print}&#39;</span> /Users/mammalogy/Ecuador_Workshop/Pathogen_Ref/bvbrc_nsamer_good_comp_noplant_veupathbd_allbut_vecthost_pathogen_genomes_04092024.fasta &gt; /Users/mammalogy/Ecuador_Workshop/Pathogen_Ref/shortened_unique_ids.fasta</span></span></code></pre></div>
 <br>
-<h2 id="5-creating-a-blast-database">5. Creating a BLAST Database<a aria-label="Link to this section" class="paige-header-link" href="#5-creating-a-blast-database"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="5-creating-a-blast-database" >
+    <a href="#5-creating-a-blast-database" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">5. Creating a BLAST Database</a>
+</h2>
 <p>With the sequence IDs renamed, we now create a BLAST database from the reference FASTA file. This database will be used for identifying the unaligned sequences.</p>
-<p><a href="../scripts/04_blast_db_creation.sh"><code>Download 04_blast_db_creation.sh</code></a></p>
+<p><a  href="../scripts/04_blast_db_creation.sh"    ><code>Download 04_blast_db_creation.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Make the database</span>
 </span></span><span class="line"><span class="cl">makeblastdb -in /Users/mammalogy/Ecuador_Workshop/Pathogen_Ref/shortened_unique_ids.fasta -dbtype nucl -out /Users/mammalogy/Ecuador_Workshop/Pathogen_Ref/bvbrc_pathogen_db -title <span class="s2">&#34;Pathogen Genomes DB&#34;</span> -parse_seqids
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Print success message</span>
 </span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;BLAST database created successfully: </span><span class="nv">$DB_NAME</span><span class="s2">&#34;</span></span></span></code></pre></div>
 <br>
-<h2 id="6-converting-bam-to-fasta">6. Converting BAM to FASTA<a aria-label="Link to this section" class="paige-header-link" href="#6-converting-bam-to-fasta"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="6-converting-bam-to-fasta" >
+    <a href="#6-converting-bam-to-fasta" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">6. Converting BAM to FASTA</a>
+</h2>
 <p>Before running BLAST, we need to convert the unaligned BAM files into FASTA format. This step prepares the sequences for the BLAST search.</p>
-<p><a href="../scripts/05_convert_bam_to_fasta.sh"><code>Download 05_convert_bam_to_fasta.sh</code></a></p>
+<p><a  href="../scripts/05_convert_bam_to_fasta.sh"    ><code>Download 05_convert_bam_to_fasta.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Load samtools (if needed)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># module load samtools</span>
 </span></span><span class="line"><span class="cl">
@@ -1185,11 +2186,30 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Converted </span><span class="nv">$BAM_FILE</span><span class="s2"> to FASTA format&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <br>
-<h2 id="7-running-blast-on-fasta-files">7. Running BLAST on FASTA Files<a aria-label="Link to this section" class="paige-header-link" href="#7-running-blast-on-fasta-files"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="7-running-blast-on-fasta-files" >
+    <a href="#7-running-blast-on-fasta-files" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">7. Running BLAST on FASTA Files</a>
+</h2>
 <p>The converted FASTA files are then subjected to BLAST search against the created database to identify possible pathogenic sequences.</p>
-<p><a href="../scripts/06_blast_fastas.sh"><code>Download 06_blast_fastas.sh</code></a></p>
+<p><a  href="../scripts/06_blast_fastas.sh"    ><code>Download 06_blast_fastas.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Set paths</span>
 </span></span><span class="line"><span class="cl"><span class="nv">FASTA_DIR</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Ecuador_Workshop/03_unmapped_fasta_out&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">DB_NAME</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Ecuador_Workshop/Pathogen_Ref/bvbrc_pathogen_db&#34;</span>
@@ -1205,11 +2225,30 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;BLAST completed for </span><span class="nv">$FASTA_FILE</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <br>
-<h2 id="8-renaming-sequence-ids-in-blast-results">8. Renaming Sequence IDs in BLAST Results<a aria-label="Link to this section" class="paige-header-link" href="#8-renaming-sequence-ids-in-blast-results"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="8-renaming-sequence-ids-in-blast-results" >
+    <a href="#8-renaming-sequence-ids-in-blast-results" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">8. Renaming Sequence IDs in BLAST Results</a>
+</h2>
 <p>Finally, the sequence IDs in the BLAST output are renamed to match their original identifiers, providing clear traceability of the sequences.</p>
-<p><a href="../scripts/07_rename_seqIDs.sh"><code>Download 07_rename_seqIDs.sh</code></a></p>
+<p><a  href="../scripts/07_rename_seqIDs.sh"    ><code>Download 07_rename_seqIDs.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Define directories and files</span>
 </span></span><span class="line"><span class="cl"><span class="nv">RESULTS_DIR</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Ecuador_Workshop/03_blastn_results&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">MAPPING_FILE</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Ecuador_Workshop/seq_id_mapping.txt&#34;</span>
@@ -1232,7 +2271,25 @@ For more details on decoding dorado model names see <a href="https://github.com/
 <!--Cryptic Species ID -->
 <div id="mac" style="display:none;">
   <h2>Molecular species ID through mitochondrial genome enrichment </h2>
-<h2 id="1-basecalling-1">1. Basecalling<a aria-label="Link to this section" class="paige-header-link" href="#1-basecalling-1"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="1-basecalling-1" >
+    <a href="#1-basecalling-1" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">1. Basecalling</a>
+</h2>
 <p><strong>Description:</strong>
 Basecalling is the process of determining the sequence of nucleotide bases from the raw data generated by the sequencer. For Nanopore sequencing, basecalling involves interpreting changes in electral current as single-stranded DNA (or RNA) passes through the Nanopore. Current fluctuations correspond to different nucleotide bases which are decoded into <span style="color: #ff0000;">A&rsquo;s</span>,
 <span style="color: #00ff00;">G&rsquo;s</span>,
@@ -1240,9 +2297,10 @@ Basecalling is the process of determining the sequence of nucleotide bases from 
 and <span style="color: #ffa500;">C&rsquo;s</span> by the dorado basecalling software.</p>
 <p>Bash is a scripting language that XYZ. We can bundle multiple commands together into a script (.sh) file, which is just a plain-text file that can be interpreted and executed by the computer. The code block below contains all of the text in the script file. All Bash scripts must begin with <code>#! /binbash/</code> as that line tells the computer where to find the Bash program/executable. Then, variables are defined (base_dir, output_dir, dorado) to make the actual code easier to read.</p>
 <p>The code below runs the dorado basecaller on each barcdoe (1 through 24) and produces an output BAM file for each, respectively.</p>
-<p><a href="../scripts/01_basecall.sh"><code>Download 01_basecall.sh</code></a></p>
+<p><a  href="../scripts/01_basecall.sh"    ><code>Download 01_basecall.sh</code></a>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Base directory for pod5 files</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Base directory for pod5 files</span>
 </span></span><span class="line"><span class="cl"><span class="nv">base_dir</span><span class="o">=</span><span class="s2">&#34;/Library/MinKNOW/data/Ecuador_Workshop_Training_Pathogens_Pero/no_sample/20240913_1820_MN40667_FAY96875_60fc85db/pod5_pass&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Output directory for basecalling results</span>
@@ -1262,17 +2320,37 @@ and <span style="color: #ffa500;">C&rsquo;s</span> by the dorado basecalling sof
 </span></span><span class="line"><span class="cl"><span class="k">do</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$dorado</span> basecaller dna_r10.4.1_e8.2_400bps_fast@v5.0.0 <span class="s2">&#34;</span><span class="nv">$base_dir</span><span class="s2">/</span><span class="nv">$barcode</span><span class="s2">/&#34;</span> &gt; <span class="s2">&#34;</span><span class="nv">$output_dir</span><span class="s2">/</span><span class="si">${</span><span class="nv">barcode</span><span class="si">}</span><span class="s2">.bam&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
-<p>Names of Dorado models (i.e., Here, we use the basecaller model <a href="https://github.com/nanoporetech/dorado?tab=readme-ov-file#dna-models"><code>dna_r10.4.1_e8.2_400bps_fast@5.0.0</code></a>. Dorado model names are systematically structured, such that each segment corresponds to a different aspect of the model:</p>
+<p>Names of Dorado models (i.e., Here, we use the basecaller model <a  href="https://github.com/nanoporetech/dorado?tab=readme-ov-file#dna-models"   rel="external"   ><code>dna_r10.4.1_e8.2_400bps_fast@5.0.0</code></a>
+. Dorado model names are systematically structured, such that each segment corresponds to a different aspect of the model:</p>
 <p><strong>Analyte Type (dna)</strong>: This denotes the type of analyte being sequenced. For DNA sequencing, it is represented as dna. If you are using a Direct RNA Sequencing Kit, this will be rna002 or rna004, depending on the kit.</p>
 <p><strong>Pore Type (r10.4.1)</strong>: This section corresponds to the type of flow cell used. For instance, FLO-MIN114/FLO-FLG114 is indicated by r10.4.1, while FLO-MIN106D/FLO-FLG001 is signified by r9.4.1.</p>
 <p><strong>Chemistry Type (e8.2)</strong>: This represents the chemistry type, which corresponds to the kit used for sequencing. For example, Kit 14 chemistry is denoted by e8.2 and Kit 10 or Kit 9 are denoted by e8.</p>
 <p><strong>Translocation Speed (400bps)</strong>: This parameter, selected at the run setup in MinKNOW, refers to the speed of translocation. Prior to starting your run, a prompt will ask if you prefer to run at 260 bps or 400 bps. The former yields more accurate results but provides less data. As of MinKNOW version 23.04, the 260 bps option has been deprecated.</p>
 <p><strong>Model Type (hac)</strong>: This represents the size of the model, where larger models yield more accurate basecalls but take more time. The three types of models are fast, hac, and sup. The fast model is the quickest, sup is the most accurate, and hac provides a balance between speed and accuracy. For most users, the hac model is recommended.</p>
 <p><strong>Model Version Number (v5.0.0)</strong>: This denotes the version of the model. Model updates are regularly released, and higher version numbers typically signify greater accuracy.
-For more details on decoding dorado model names see <a href="https://github.com/nanoporetech/dorado">here</a>.</p>
-<h2 id="2-convert-each-bam-file-to-a-fasta-format">2. Convert each BAM file to a FASTA format<a aria-label="Link to this section" class="paige-header-link" href="#2-convert-each-bam-file-to-a-fasta-format"></a></h2>
+For more details on decoding dorado model names see <a  href="https://github.com/nanoporetech/dorado"   rel="external"   >here</a>
+.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="2-convert-each-bam-file-to-a-fasta-format" >
+    <a href="#2-convert-each-bam-file-to-a-fasta-format" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">2. Convert each BAM file to a FASTA format</a>
+</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Base directory for output</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Base directory for output</span>
 </span></span><span class="line"><span class="cl"><span class="nv">base_dir</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Ecuador_Workshop/01_sup_out&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Output directory for basecalling results</span>
@@ -1289,11 +2367,30 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <br>
 </div>
-<h2 id="2-run-flye">2. Run Flye<a aria-label="Link to this section" class="paige-header-link" href="#2-run-flye"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="2-run-flye" >
+    <a href="#2-run-flye" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">2. Run Flye</a>
+</h2>
 <p><strong>Description</strong>:
-<a href="https://github.com/mikolmogorov/Flye">FLYE</a> is a software tool used to assemble genomes from long DNA sequences without a reference file to base the alignments off of. It pieces together overlapping DNA reads to form a continuous sequence, even if the data is noisy or has gaps. For mitogenomes, FLYE helps combine these long reads into a complete mitochondrial genome, and sometimes reads may span the entire mitogenome, making FLYE&rsquo;s aligning pretty easy.</p>
+<a  href="https://github.com/mikolmogorov/Flye"   rel="external"   >FLYE</a>
+ is a software tool used to assemble genomes from long DNA sequences without a reference file to base the alignments off of. It pieces together overlapping DNA reads to form a continuous sequence, even if the data is noisy or has gaps. For mitogenomes, FLYE helps combine these long reads into a complete mitochondrial genome, and sometimes reads may span the entire mitogenome, making FLYE&rsquo;s aligning pretty easy.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Base directory for output</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Base directory for output</span>
 </span></span><span class="line"><span class="cl"><span class="nv">base_dir</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Ecuador_Workshop/02_convert_bams_out&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Output directory for basecalling results</span>
@@ -1312,10 +2409,28 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
 <br>
 </div>
-<h2 id="3-align-your-mitochondrial-genomes-using-dorado">3. Align your mitochondrial genomes using Dorado<a aria-label="Link to this section" class="paige-header-link" href="#3-align-your-mitochondrial-genomes-using-dorado"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="3-align-your-mitochondrial-genomes-using-dorado" >
+    <a href="#3-align-your-mitochondrial-genomes-using-dorado" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">3. Align your mitochondrial genomes using Dorado</a>
+</h2>
 <p><strong>Desription</strong>: The dorado package is a suite of tools tailored for working with long read, Nanopore sequence data. This is the aligning function in Nanopore in which we provide a reference genome or an idea of what the genome should look like. The reads are then aligned to that reference to create a file for each individual&rsquo;s reads.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1"># Base directory for output</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Base directory for output</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#path for where you installed Dorado</span>
 </span></span><span class="line"><span class="cl"><span class="nv">dorado</span><span class="o">=</span><span class="s2">&#34;/Users/mammalogy/Documents/software/dorado-0.7.0-osx-arm64/bin/dorado&#34;</span>
@@ -1337,7 +2452,25 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl"><span class="k">done</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># The &#34; | &#34; is a pipe command. It sends the output of the alignment into the samtools sort funtion. This function puts our reads in order so we can create a consensus sequence on the next step. </span></span></span></code></pre></div>
-<h2 id="create-a-consensus-sequence-using-samtools">Create a Consensus Sequence using samtools<a aria-label="Link to this section" class="paige-header-link" href="#create-a-consensus-sequence-using-samtools"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="create-a-consensus-sequence-using-samtools" >
+    <a href="#create-a-consensus-sequence-using-samtools" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Create a Consensus Sequence using samtools</a>
+</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">for</span> barcode in barcode<span class="o">{</span>01..24<span class="o">}</span> 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">do</span>
@@ -1348,7 +2481,25 @@ For more details on decoding dorado model names see <a href="https://github.com/
 </span></span><span class="line"><span class="cl"><span class="c1">#-min-MQ minimum mapping quality</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#-min-BQ minimum base quality</span>
 </span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div>
-<h2 id="4-converting-our-consensus-sequence-into-a-format-for-alignment">4. Converting our consensus sequence into a format for alignment<a aria-label="Link to this section" class="paige-header-link" href="#4-converting-our-consensus-sequence-into-a-format-for-alignment"></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="4-converting-our-consensus-sequence-into-a-format-for-alignment" >
+    <a href="#4-converting-our-consensus-sequence-into-a-format-for-alignment" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">4. Converting our consensus sequence into a format for alignment</a>
+</h2>
 <p><strong>Description</strong>:
 Rename the header in each fasta file by the name of the fasta file</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Loop through a series of barcode numbers from 01 to 24</span>
@@ -1364,8 +2515,27 @@ Rename the header in each fasta file by the name of the fasta file</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Combine (concatenate) all the renamed sequences into a single file called &#34;concatenated.fasta&#34;</span>
 </span></span><span class="line"><span class="cl">cat <span class="nv">$output_dir</span>/*.rename.fasta &gt; <span class="nv">$output_dir</span>/concatanated.fasta</span></span></code></pre></div>
-<h2 id="5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree">5. Use MEGA to bring in concatanated fasta file, align the sequences, and build a tree<a aria-label="Link to this section" class="paige-header-link" href="#5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree"></a></h2>
-<p><strong>Description</strong>: <a href="https://www.megasoftware.net/">MEGA</a> (Molecular Evolutionary Genetics Analysis) is a bioinformatics software suite used to analyze and visualize molecular sequence data to study evolutionary relationships. It provides tools for constructing phylogenetic trees, estimating divergence times, and testing evolutionary hypotheses using nucleotide and protein sequences.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2  id="5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree" >
+    <a href="#5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">5. Use MEGA to bring in concatanated fasta file, align the sequences, and build a tree</a>
+</h2>
+<p><strong>Description</strong>: <a  href="https://www.megasoftware.net/"   rel="external"   >MEGA</a>
+ (Molecular Evolutionary Genetics Analysis) is a bioinformatics software suite used to analyze and visualize molecular sequence data to study evolutionary relationships. It provides tools for constructing phylogenetic trees, estimating divergence times, and testing evolutionary hypotheses using nucleotide and protein sequences.</p>
 <br>
 <p>Here, we imported <code>concatanated.fasta</code> into the MEGA Alignment explorer. Each barcode is a row and in that row are all of the nucleotide bases in order, alinged to eachother. Each base is a different color, with N&rsquo;s representing bases of unknown identity.</p>
 <img src="../results/mega1.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;"/>
@@ -1374,10 +2544,72 @@ Rename the header in each fasta file by the name of the fasta file</p>
 </div>
 <br>
 <img src="../results/mega2.jpg" alt="Alignment Process" style="max-width: 100%; height: auto; display: block; margin: 20px auto;"/>
-</main>
+
         
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
+    </main>
+
+    
 
 
 
@@ -1394,7 +2626,66 @@ Rename the header in each fasta file by the name of the fasta file</p>
 
 
 
-    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
 </article>
 
 
@@ -1410,56 +2701,24 @@ Rename the header in each fasta file by the name of the fasta file</p>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     
 
 
 
-    
 
 
 
-    
 
 
 
-    
+                    
 
 
 
-    
 
 
 
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
 
 
 
@@ -1482,29 +2741,54 @@ Rename the header in each fasta file by the name of the fasta file</p>
 
 
 
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
     
 
 
-
-
-
-    <footer id="paige-site-footer">
-        
-
-        
-            <p class="paige-row-narrow text-center text-secondary" id="paige-copyright">© Alex Hey</p>
-        
-
-        
-
-        
-
-        
-    </footer>
-
-
-
-                    
                 </div>
             </div>
         </div>
@@ -1526,83 +2810,174 @@ Rename the header in each fasta file by the name of the fasta file</p>
 
 
     
+
     
-    
-
-
-<script  crossorigin="anonymous"   defer  integrity="sha256-gfPiYYSP&#43;RNtNeRBt45mJombFJmNf0V0Ipu785Obi0M="   referrerpolicy="no-referrer"  src="../js/paige/bootstrap/bootstrap.bundle.min.81f3e261848ff9136d35e441b78e6626899b14998d7f4574229bbbf3939b8b43.js" ></script>
-
-
-
-
-
-
-
     
 
 
-
-    
-
+<script  crossorigin="anonymous"   defer  integrity="sha256-rJF61ZriZrRi/FZim6w1a1dHEvCKpqo8ProZWeZv9Ng="   referrerpolicy="no-referrer"  src="../js/paige/bootstrap/bootstrap.bundle.min.ac917ad59ae266b462fc56629bac356b574712f08aa6aa3c3eba1959e66ff4d8.js" ></script>
 
 
-    
+
+
+
+
+
+
+
+
+
+
 
 
 
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
+    
+    
+    
 
+    
+        
+    
 
     
 
-
+    
+        
+    
 
     
 
-
+    
 
     
 
+    
+        
+    
 
+    
+        
+    
 
     
 
-
+    
 
     
 
-
+    
+        
+    
 
     
 
-
+    
+        
+    
 
     
 
+    
 
+    
+        
+    
+
+    
+        
+    
 
     
 
-
-
+    
+        
     
 
-
-
-    
-
-
-
-    
-
-
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023) .","articleSection":"Nanopore workflow","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Nanopore workflow","inLanguage":"en-us","name":"Nanopore workflow","timeRequired":"PT22M","url":"//localhost:4321/workflows/","wordCount":4675}</script>
 
 
 
 <noscript>JavaScript is required</noscript>
 
-
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+
     </body>
 </html>
