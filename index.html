@@ -1184,6 +1184,70 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
     font-size: 0.82rem; color: var(--text-mid); margin-bottom: 2rem;
   }
 
+
+  /* ── PHOTO STRIP ── */
+  .photo-strip-section {
+    padding: 3rem 0 0;
+    overflow: hidden;
+  }
+  .photo-strip-kicker {
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--sage); margin-bottom: 1.2rem; padding: 0 3rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .photo-strip-kicker::after { content:''; flex:1; max-width:40px; height:1px; background:var(--sage); opacity:0.5; }
+  .photo-marquee-wrap {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+  .photo-marquee {
+    display: flex;
+    gap: 12px;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+  }
+  .photo-marquee:hover { animation-play-state: paused; }
+  .photo-marquee img {
+    height: 220px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.3s, filter 0.3s;
+    filter: saturate(0.85);
+    cursor: pointer;
+  }
+  .photo-marquee img:hover {
+    transform: scale(1.03);
+    filter: saturate(1.1);
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── LIGHTBOX ── */
+  .mepa-lightbox {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(4,20,22,0.96);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.25s;
+  }
+  .mepa-lightbox.open { opacity: 1; pointer-events: all; }
+  .mepa-lightbox img {
+    max-width: 90vw; max-height: 85vh;
+    border-radius: 10px; object-fit: contain;
+  }
+  .mepa-lightbox-close {
+    position: absolute; top: 1.5rem; right: 2rem;
+    font-size: 2rem; color: rgba(220,245,248,0.5);
+    cursor: pointer; background: none; border: none;
+    transition: color 0.2s; line-height: 1;
+  }
+  .mepa-lightbox-close:hover { color: var(--mint); }
+
   @media (max-width: 768px) {
     .mepa-section { padding: 3rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1406,7 +1470,37 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
       </div>
     </section>
 
-    
+
+    <div class="photo-strip-section">
+      <div class="photo-strip-kicker">Ecuador 2024 · Previous Workshop</div>
+      <div class="photo-marquee-wrap">
+        <div class="photo-marquee">
+          <img src="./workshop_pics/1.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/2.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/4.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/5.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/7.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/8.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/9.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/10.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/11.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/12.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/group.jpg" alt="Group photo">
+          <img src="./workshop_pics/1.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/2.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/4.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/5.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/7.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/8.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/9.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/10.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/11.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/12.jpg" alt="Workshop photo">
+          <img src="./workshop_pics/group.jpg" alt="Group photo">
+        </div>
+      </div>
+    </div>
+
     <section class="mepa-section">
       <div data-aos="fade-up">
         <div class="section-kicker">Who you'll learn from</div>
@@ -1559,12 +1653,37 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
       </div>
     </div>
 
+
+<div class="mepa-lightbox" id="mepaLightbox">
+  <button class="mepa-lightbox-close" id="mepaLightboxClose">&times;</button>
+  <img src="" id="mepaLightboxImg" alt="Workshop photo">
+</div>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
   AOS.init({ duration: 650, once: true, offset: 60, easing: 'ease-out-quad' });
+
+  (function() {
+    var lb = document.getElementById('mepaLightbox');
+    var lbImg = document.getElementById('mepaLightboxImg');
+    document.getElementById('mepaLightboxClose').addEventListener('click', function() {
+      lb.classList.remove('open');
+    });
+    lb.addEventListener('click', function(e) {
+      if (e.target === lb) lb.classList.remove('open');
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') lb.classList.remove('open');
+    });
+    document.querySelectorAll('.photo-marquee img').forEach(function(img) {
+      img.addEventListener('click', function() {
+        lbImg.src = this.src;
+        lb.classList.add('open');
+      });
+    });
+  })();
 
   function showPhase(name, btn) {
     document.querySelectorAll('.phase-panel').forEach(function(p){ p.classList.remove('active'); });
@@ -1788,7 +1907,7 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
         
     
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Field + Genomics Workshop · 2026 Museums \u0026 Emerging\nPathogens in the Americas Nine days of field surveillance, DNA extraction, Nanopore sequencing,\nand bioinformatics ","articleSection":"Introduction","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Introduction","inLanguage":"en-us","name":"Introduction","timeRequired":"PT4M","url":"//localhost:4321/","wordCount":650}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Field + Genomics Workshop · 2026 Museums \u0026 Emerging\nPathogens in the Americas Nine days of field surveillance, DNA extraction, Nanopore sequencing,\nand bioinformatics ","articleSection":"Introduction","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Introduction","inLanguage":"en-us","name":"Introduction","timeRequired":"PT4M","url":"//localhost:4321/","wordCount":656}</script>
 
 
 
