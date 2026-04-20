@@ -36,7 +36,7 @@
 
 
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
     
 
 
@@ -121,7 +121,7 @@
 <meta content="#0d6efd" name="theme-color">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<meta property="og:url" content="//localhost:4321/workflows/">
+<meta property="og:url" content="/workflows/">
   <meta property="og:title" content="Nanopore workflow">
   <meta property="og:description" content="Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023) .">
   <meta property="og:locale" content="en_us">
@@ -259,7 +259,7 @@
     
 
 
-<link  crossorigin="anonymous"  href="../css/paige/bootstrap/paige.14af94fab147af3def91a3f41c4d4186937373dd.min.90c4c73a5ddf76cf66b04df8e3422cb32b261a91b8768e3807bd11b85e20d1ef.css"  integrity="sha256-kMTHOl3fds9msE3440IssysmGpG4do44B70RuF4g0e8="   referrerpolicy="no-referrer"  rel="stylesheet">
+<link  crossorigin="anonymous"  href="../css/paige/bootstrap/paige.14af94fab147af3def91a3f41c4d4186937373dd.min.f090a42ffd1b27ac2b84dc9992e6b0848ee61ddd12e97c7931328b7140da2532.css"  integrity="sha256-8JCkL/0bJ6wrhNyZkuawhI7mHd0S6Xx5MTKLcUDaJTI="   referrerpolicy="no-referrer"  rel="stylesheet">
 
 
 
@@ -1468,7 +1468,7 @@ GCTAGCTAGCTAGCTGATCGTACG
 This step aligns the Nanopore sequencing reads to the reference genome. BWA-MEM is the algorithm in BWA that is best for aligning long reads (70bp or more).  <a  href="https://samtools.github.io/hts-specs/SAMv1.pdf"   rel="external"   >SAM</a>
  files (the ouput file format of this step) are a formatted, plain-text file that contains aligment information for sequences mapped to a reference. SAM files can also contain unmapped sequences.</p>
 <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;"> <img src="../procedures/mapping.png" alt="Alignment Process" style="max-width: 100%; height: auto;"/> </div>
-<p>Photo credit: <a  href="https://usegalaxy.org/"   rel="external"   >Galaxy</a>
+<p>Photo credit: <a  href="https://usegalaxy.org/"    >Galaxy</a>
 </p>
 
 
@@ -1587,7 +1587,7 @@ Here, we remove reads that mapped to the host genome, retaining only unmapped se
 </span></span><span class="line"><span class="cl"><span class="c1">#samtools -f is a flag that means &#34;flag.&#34; In this case, we specify 4, which translates to filter that fasta file to keep only unmapped sequences</span></span></span></code></pre></div>
 <br>
 <p><strong>Description</strong>:
-<a  href="https://www.htslib.org/"   rel="external"   >samtools</a>
+<a  href="https://www.htslib.org/"    >samtools</a>
  is a suite of programs used for interacting with high-throughput sequencing data. It consists of samtools, BCFtools, and HTSlib.</p>
 <br>
 
@@ -1863,7 +1863,7 @@ Filter matches output from BLAST to retain only the query sequences that matched
     <a href="#conclusion" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Conclusion</a>
 </h3>
 <p>In this case, we can see that our longest read maps near-perfectly to a portion of an <a  href="https://www.ncbi.nlm.nih.gov/nuccore/CP000235.1"   rel="external"   >Anaplasma phagocytophilum reference genome</a>
-, a Gram-negative bacterium that causes multiple diseases in cattle and sheep, as well as zoonoses like <a  href="https://www.ncbi.nlm.nih.gov/books/NBK513341/"   rel="external"   >human granulocytic anaplasmosis.</a>
+, a Gram-negative bacterium that causes multiple diseases in cattle and sheep, as well as zoonoses like <a  href="https://www.ncbi.nlm.nih.gov/books/NBK513341/"    >human granulocytic anaplasmosis.</a>
  This result is consistent to those of Kip et. al 2023, which found evidence of the same bacteria in their approach that used the <a  href="https://github.com/DerrickWood/kraken2"   rel="external"   >kraken2</a>
  package for metagenomic classification.</p>
 <br>
@@ -2534,7 +2534,7 @@ Rename the header in each fasta file by the name of the fasta file</p>
 <h2  id="5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree" >
     <a href="#5-use-mega-to-bring-in-concatanated-fasta-file-align-the-sequences-and-build-a-tree" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">5. Use MEGA to bring in concatanated fasta file, align the sequences, and build a tree</a>
 </h2>
-<p><strong>Description</strong>: <a  href="https://www.megasoftware.net/"   rel="external"   >MEGA</a>
+<p><strong>Description</strong>: <a  href="https://www.megasoftware.net/"    >MEGA</a>
  (Molecular Evolutionary Genetics Analysis) is a bioinformatics software suite used to analyze and visualize molecular sequence data to study evolutionary relationships. It provides tools for constructing phylogenetic trees, estimating divergence times, and testing evolutionary hypotheses using nucleotide and protein sequences.</p>
 <br>
 <p>Here, we imported <code>concatanated.fasta</code> into the MEGA Alignment explorer. Each barcode is a row and in that row are all of the nucleotide bases in order, alinged to eachother. Each base is a different color, with N&rsquo;s representing bases of unknown identity.</p>
@@ -2913,7 +2913,7 @@ Rename the header in each fasta file by the name of the fasta file</p>
         
     
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023) .","articleSection":"Nanopore workflow","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Nanopore workflow","inLanguage":"en-us","name":"Nanopore workflow","timeRequired":"PT22M","url":"//localhost:4321/workflows/","wordCount":4675}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Table of Contents Molecular Procedures Worked Example Real-Time Example Molecular Procedures DNA Extraction Library Preparation Flow Cell Wash and Storage DNA Extraction Download DNA Extraction Protocol Library Preparation Download Nanopore Native Barcode Library Prep PDF Flow Cell Wash and Storage Download Flow Cell Wash and Storage Protocol PDF Worked Example The goal of this portion of the workshop is to practice the basic bioinformatic workflow required to process Nanopore adaptive sampling sequence data. Specifically, we will map reads to reference sequences, filter out host sequences, and perform homology searches against known pathogen sequences. This workflow uses publicly available data published by [Kipp et al. (2023)](https://www.nature.com/articles/s41598-023-37134-9), which shows how NAS can be used to selectively sequence DNA from multiple bacterial tick-borne pathogens circulating in wild populations of the black-legged tick vector, Ixodes scapularis. They test the consistency of pathogen recovery using NAS enrichment and depletion methods, compared to more traditional Illumina metagenomic sequencing methods. NAS enrichment and depletion methods successfully recovered 4 bacterial tick-borne pathogens (Borellia burgdorferi; Borella miyamotoi; Anaplasma phagocytophilum; and Eherlichia muris) from 8 female I. scapularis ticks, and even resulted in the sequencing of the entire bacterial pathogen genomes. Importantly, their NAS results were consistent with Illumina 16S microbiome data. For this exercise, we are only working with their depletion dataset, as that workflow is best aligned with the sequencing approach of this workshop. The goal of this process is to use NAS for real-time metagenomic surveillance, targeting pathogen detection in field-collected samples. This approach allows for selective sequencing of desired genomic regions. By performing these steps, we can efficiently map sequencing reads to reference genomes, filter out host sequences, and perform homology searches against known pathogen databases. This workflow mirrors the methodology described in Kipp et al. (2023) .","articleSection":"Nanopore workflow","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Nanopore workflow","inLanguage":"en-us","name":"Nanopore workflow","timeRequired":"PT22M","url":"/workflows/","wordCount":4675}</script>
 
 
 
