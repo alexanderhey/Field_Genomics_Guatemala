@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>//localhost:4321/</loc>
     <lastmod>2024-10-22T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/workflows/</loc>
+    <loc>//localhost:4321/workflows/</loc>
     <lastmod>2024-10-22T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/programs/</loc>
+    <loc>//localhost:4321/programs/</loc>
     <lastmod>2024-10-22T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/getting-ready/</loc>
+    <loc>//localhost:4321/getting-ready/</loc>
     <lastmod>2024-10-02T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/realtimeexample/</loc>
+    <loc>//localhost:4321/realtimeexample/</loc>
     <lastmod>2024-09-24T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/slides/</loc>
+    <loc>//localhost:4321/slides/</loc>
     <lastmod>2024-09-24T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>/gallery/</loc>
+    <loc>//localhost:4321/gallery/</loc>
   </url><url>
-    <loc>/workedexample/</loc>
+    <loc>//localhost:4321/workedexample/</loc>
   </url><url>
-    <loc>/authors/author-demo/</loc>
+    <loc>//localhost:4321/authors/author-demo/</loc>
   </url><url>
-    <loc>/authors/</loc>
+    <loc>//localhost:4321/authors/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:4321/categories/</loc>
   </url><url>
-    <loc>/contactus/</loc>
+    <loc>//localhost:4321/contactus/</loc>
   </url><url>
-    <loc>/categories/paige/</loc>
+    <loc>//localhost:4321/categories/paige/</loc>
   </url><url>
-    <loc>/replicate-this-workshop/</loc>
+    <loc>//localhost:4321/replicate-this-workshop/</loc>
   </url><url>
-    <loc>/tags/sections/</loc>
+    <loc>//localhost:4321/tags/sections/</loc>
   </url><url>
-    <loc>/series/</loc>
+    <loc>//localhost:4321/series/</loc>
   </url><url>
-    <loc>/series/series-demo/</loc>
+    <loc>//localhost:4321/series/series-demo/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:4321/tags/</loc>
   </url>
 </urlset>
