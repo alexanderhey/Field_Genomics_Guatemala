@@ -35,7 +35,7 @@
 
 
 <head>
-	<meta name="generator" content="Hugo 0.160.1">
+	<meta name="generator" content="Hugo 0.160.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
     
 
 
@@ -120,7 +120,7 @@
 <meta content="#0d6efd" name="theme-color">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<meta property="og:url" content="/">
+<meta property="og:url" content="//localhost:4321/">
   <meta property="og:title" content="Introduction">
   <meta property="og:description" content="Field &#43; Genomics Workshop · 2026 Museums &amp; Emerging
 Pathogens in the Americas Nine days of field surveillance, DNA extraction, Nanopore sequencing,
@@ -262,7 +262,7 @@ and bioinformatics">
     
 
 
-<link  crossorigin="anonymous"  href="./css/paige/bootstrap/paige.14af94fab147af3def91a3f41c4d4186937373dd.min.f090a42ffd1b27ac2b84dc9992e6b0848ee61ddd12e97c7931328b7140da2532.css"  integrity="sha256-8JCkL/0bJ6wrhNyZkuawhI7mHd0S6Xx5MTKLcUDaJTI="   referrerpolicy="no-referrer"  rel="stylesheet">
+<link  crossorigin="anonymous"  href="./css/paige/bootstrap/paige.14af94fab147af3def91a3f41c4d4186937373dd.min.90c4c73a5ddf76cf66b04df8e3422cb32b261a91b8768e3807bd11b85e20d1ef.css"  integrity="sha256-kMTHOl3fds9msE3440IssysmGpG4do44B70RuF4g0e8="   referrerpolicy="no-referrer"  rel="stylesheet">
 
 
 
@@ -902,8 +902,8 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
   .hero-eyebrow::before {
     content: ''; display: block; width: 32px; height: 1px; background: var(--mint);
   }
-  .hero-title {
-    font-family: 'Playfair Display', Georgia, serif;
+    .hero-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 700; line-height: 1.1;
     color: var(--parchment);
@@ -1247,7 +1247,27 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
     transition: color 0.2s; line-height: 1;
   }
   .mepa-lightbox-close:hover { color: var(--mint); }
+/* ── ITINERARY DOWNLOAD BUTTON ── */
+  .itinerary-dl-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-bottom: 2rem;
+    padding: 9px 20px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500;
+    color: var(--mint);
+    border: 1px solid rgba(24,142,157,0.35);
+    border-radius: 100px;
+    text-decoration: none;
+    background: rgba(24,142,157,0.08);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .itinerary-dl-btn:hover {
+    background: rgba(24,142,157,0.18);
+    border-color: rgba(24,142,157,0.6);
+    color: var(--mint);
+    text-decoration: none;
+  }
 
+  @media (max-width: 768px) {
   @media (max-width: 768px) {
     .mepa-section { padding: 3rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1269,7 +1289,7 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
     <div class="hero-vignette"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">Field + Genomics Workshop · 2026</div>
-      <h1 class="hero-title">Museums &amp; Emerging<br><em>Pathogens</em> in the Americas</h1>
+      <h1 class="hero-title"><em>Museums</em> &amp; Emerging<br><em>Pathogens</em> in the Americas</h1>
       <p class="hero-subtitle">Nine days of field surveillance, DNA extraction, Nanopore sequencing,<br>and bioinformatics 
   </p>
       <div class="hero-chips">
@@ -1314,7 +1334,7 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
       <div class="about-grid">
         <div data-aos="fade-right">
           <div class="about-image-wrap">
-            <img src="./Guatemala/Mepa_new.webp" alt="Tikal fieldwork site">
+            <img src="./Guatemala/mepa.jpg" alt="Tikal fieldwork site">
             <div class="about-image-badge">
               <strong>What is MEPA?</strong><br>
               A virtual Community of Practice and branch of Project ECHO connecting natural history museum biorepositories with biomedical initiatives across the Americas.
@@ -1325,7 +1345,7 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
           <div class="section-kicker">About the program</div>
           <h2 class="section-heading">Bridging museums,<br>genomics, and global health</h2>
           <p class="section-body">
-            <a href="https://hsc.unm.edu/medicine/education/echo/emerging-pathogens/" target="_blank" style="color:var(--sage);text-decoration:none;font-weight:500;">MEPA</a> aims to improve the sustainability, rigor, and replicability of pathogen surveillance in wild animals. In collaboration with <strong>Universidad de San Carlos de Guatemala</strong>, we lead hands-on Field+Genomics Workshops where participants conduct field-based surveillance of small mammals, perform DNA extractions and library preparation, run Nanopore Adaptive Sampling, and carry out basic bioinformatics — all in the field.
+            <a href="https://mepa-network.weebly.com/" target="_blank" style="color:var(--sage);text-decoration:none;font-weight:500;">MEPA</a> aims to improve the sustainability, rigor, and replicability of pathogen surveillance in wild animals. In collaboration with <strong>Universidad de San Carlos de Guatemala</strong>, we lead hands-on Field+Genomics Workshops where participants conduct field-based surveillance of small mammals, perform DNA extractions and library preparation, run Nanopore Adaptive Sampling, and carry out basic bioinformatics — all in the field.
           </p>
           <div class="about-links">
             <a href="https://alexanderhey.github.io/MEPA_Field-Genomics/" target="_blank" class="about-link">Check out our last workshop in Ecuador</a>
@@ -1353,7 +1373,10 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
         <button class="phase-tab" onclick="showPhase('labwork', this)">Lab Work · Days 6–7</button>
         <button class="phase-tab" onclick="showPhase('bioinformatics', this)">Bioinformatics · Days 8–9</button>
       </div>
-
+<a href="./Itinerary/Guatemala_itinerary.pdf" download class="itinerary-dl-btn" target="_blank">
+        ↓ Download Full Itinerary PDF
+      </a>
+      
       <div id="phase-trapping" class="phase-panel active" data-aos="fade-up" data-aos-delay="150">
         <div class="day-cards">
           <div class="day-card">
@@ -1561,10 +1584,10 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
           </div>
         </div>
         <div class="team-card" data-aos="fade-up" data-aos-delay="60">
-          <img src="./headshots/john.jpg" alt="John Dunnum" class="team-photo">
+          <img src="./headshots/Nati.jpg" alt="John Dunnum" class="team-photo">
           <div class="team-info">
-            <p class="team-name">John Dunnum, PhD</p>
-            <p class="team-inst">Museum of Southwestern Biology, UNM</p>
+            <p class="team-name">Natalia Betancurt</p>
+            <p class="team-inst">University of Kansas Biodiversity Institute</p>
             <div class="team-tags"><span class="team-tag">Mammalogist</span><span class="team-tag">MEPA member</span></div>
           </div>
         </div>
@@ -1578,6 +1601,7 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
         </div>
         <div class="team-card" data-aos="fade-up" data-aos-delay="0">
           <div class="team-info">
+            <img src="./headshots/Sergio.jpg" alt="Marlon Cobos" class="team-photo">
             <p class="team-name">Sergio Perez, PhD</p>
             <p class="team-inst">Universidad de San Carlos de Guatemala</p>
             <div class="team-tags"><span class="team-tag">Mammalogist</span><span class="team-tag">Small mammals curator</span></div>
@@ -1926,7 +1950,7 @@ main, .paige-page, .container, .container-fluid { padding: 0 !important; max-wid
         
     
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Field + Genomics Workshop · 2026 Museums \u0026 Emerging\nPathogens in the Americas Nine days of field surveillance, DNA extraction, Nanopore sequencing,\nand bioinformatics ","articleSection":"Introduction","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Introduction","inLanguage":"en-us","name":"Introduction","timeRequired":"PT4M","url":"/","wordCount":656}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Field + Genomics Workshop · 2026 Museums \u0026 Emerging\nPathogens in the Americas Nine days of field surveillance, DNA extraction, Nanopore sequencing,\nand bioinformatics ","articleSection":"Introduction","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Introduction","inLanguage":"en-us","name":"Introduction","timeRequired":"PT4M","url":"//localhost:4321/","wordCount":660}</script>
 
 
 
