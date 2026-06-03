@@ -123,14 +123,14 @@
 
 <meta property="og:url" content="/programs/">
   <meta property="og:title" content="Software">
-  <meta property="og:description" content="Windows (With Ubuntu) / Linux Mac Install Linux on Windows If you’re using Windows, it’s highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don&#39;t understand, that&#39;s okay- we&#39;re going to go over it in the workshop. If you need more details, here is a virtual machine explanation: Ubuntu.">
+  <meta property="og:description" content="Windows (With Ubuntu) / Linux Mac Install Linux on Windows If you&#39;re using Windows, it&#39;s highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don&#39;t understand, that&#39;s okay- we&#39;re going to go over it in the workshop. If you need more details, here is a virtual machine explanation: Ubuntu.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Software">
-  <meta name="twitter:description" content="Windows (With Ubuntu) / Linux Mac Install Linux on Windows If you’re using Windows, it’s highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don&#39;t understand, that&#39;s okay- we&#39;re going to go over it in the workshop. If you need more details, here is a virtual machine explanation: Ubuntu.">
+  <meta name="twitter:description" content="Windows (With Ubuntu) / Linux Mac Install Linux on Windows If you&#39;re using Windows, it&#39;s highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don&#39;t understand, that&#39;s okay- we&#39;re going to go over it in the workshop. If you need more details, here is a virtual machine explanation: Ubuntu.">
 
 
 
@@ -961,7 +961,7 @@
                 
 
                 
-                    <p class="paige-row-short text-secondary" id="paige-page-word-count" >1130 words</p>
+                    <p class="paige-row-short text-secondary" id="paige-page-word-count" >1245 words</p>
                 
 
                 
@@ -976,14 +976,6 @@
             <div class="align-items-center d-flex flex-column paige-row-tall text-start" id="paige-page-toc">
                 <div class="border rounded" style="padding: 1rem 2rem 0 1rem">
                     <nav id="TableOfContents">
-  <ol>
-    <li><a href="#program-information">Program Information</a></li>
-    <li><a href="#samtools">Samtools</a></li>
-    <li><a href="#blast">BLAST+</a></li>
-    <li><a href="#bwa">BWA</a></li>
-    <li><a href="#dorado">Dorado</a></li>
-  </ol>
-
   <ol>
     <li><a href="#install-rstudio">Install RStudio</a></li>
   </ol>
@@ -1119,29 +1111,32 @@
 
 
         
-            </div>
-<hr>
-<style>
+            <style>
   pre {
     font-size: 0.9em;
     background-color: #2e2e2e;
     color: #f8f8f2;
     padding: 10px;
     border-radius: 4px;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
   }
 
   h2, h3, h4 {
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 1.5em;
   }
 
-  h4 {
-    font-size: 1.2em;
-  }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.3em; }
+  h4 { font-size: 1.1em; }
 
   ul {
     margin-top: 5px;
+    padding-left: 20px;
   }
 
   li {
@@ -1157,6 +1152,7 @@
     transition: background-color 0.3s ease;
     margin-right: 10px;
     border-radius: 5px;
+    font-size: 1em;
   }
 
   .tab-button:hover {
@@ -1168,226 +1164,195 @@
     color: white;
     border-color: #007bff;
   }
+
+  .warning-box {
+    border-left: 4px solid #e6a817;
+    background-color: #fffbf0;
+    color: #3d2f00;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+  }
 </style>
+<hr>
 <div style="margin-bottom: 20px;">
   <button id="windowsButton" class="tab-button" onclick="showOS('windows')">Windows (With Ubuntu) / Linux</button>
   <button id="macButton" class="tab-button" onclick="showOS('mac')">Mac</button>
 </div>
 <div id="windows" style="display:none;">
   <h2>Install Linux on Windows</h2>
-  <p>If you’re using Windows, it’s highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don't understand, that's okay- we're going to go over it in the workshop. If you need more details, here is a virtual machine explanation: <a href="https://ubuntu.com/server/docs/explanation/intro-to/virtualisation/">Ubuntu</a>.</p>
+  <p>If you're using Windows, it's highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don't understand, that's okay- we're going to go over it in the workshop. If you need more details, here is a virtual machine explanation: <a href="https://ubuntu.com/server/docs/explanation/intro-to/virtualisation/" target="_blank">Ubuntu</a>.</p>
   <p>Follow these steps to get started:</p>
   <h3>Step 1: Open Command Prompt and Run WSL Installation</h3>
-  <pre><code>
-wsl --install
-  </code></pre>
+  <pre><code>wsl --install</code></pre>
   <ul>
     <li>Opening the Command Prompt in Windows: press the Windows Key, type cmd, and press Enter</li>
     <li>Follow the instructions to install the WSL virtual machine.</li>
     <li>You may be required to restart your computer during this process.</li>
     <li>After restarting, a terminal should appear.</li>
     <li>Set up a username and password for your new Ubuntu environment. NOTE: you will not be able to view your password as you type. If you think you entered something wrong, just hit enter through the confirm password prompt and the screen will prompt you to enter a new password again (followed by confirmation).</li>
-    <li>Once you have installed wsl, the command prompt may change color. </li>
+    <li>Once you have installed wsl, the command prompt may change color.</li>
   </ul>
-  <p>If you need more details, visit the official website: <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Install WSL</a></p>
+  <p>If you need more details, visit the official website: <a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank">Install WSL</a></p>
   <h3>Step 2: Install Required Software Elements</h3>
   <p>Run the following commands to set up your session:</p>
   <h4>Add a complete library repository for Ubuntu</h4>
-  <pre><code>
-sudo add-apt-repository universe
-sudo apt update
-  </code></pre>
+  <pre><code>sudo add-apt-repository universe
+sudo apt update</code></pre>
   <h4>Install the libraries we will use for the workshop</h4>
   <p>Use the following commands to install git, bzip2, bwa, samtools, and blast:</p>
-  <pre><code>
-sudo apt install git-all -y
+  <pre><code>sudo apt install git-all -y
 sudo apt install bzip2 -y
 sudo apt install bwa -y
 sudo apt install samtools -y
-sudo apt install ncbi-blast+ -y
-  </code></pre>
-  <p>You are all set. Continue to the <a href="../workflows">Workflow page</a> to begin the Worked Example.</p>
+sudo apt install ncbi-blast+ -y</code></pre>
 </div>
 <div id="mac" style="display:none;">
-  <h3>Step 1: Install Homebrew</h3>
-  <p>Before installing, check which version of macOS you're running. Click the Apple menu (&#63743;) in the top-left corner and select <strong>About This Mac</strong>. If you are running <strong>macOS Catalina (10) or newer</strong>, you should be able to proceed with the Homebrew installation below without issue.</p>
-  <p><strong><em>Note: If you are running an older operating system, or if you run into any questions or issues at all during this process, please reach out to the instructors! We are here to help.</em></strong></p>
-  <p>Homebrew ("brew" for short) is an open-source software package management system that simplifies the installation of software on macOS. For more details visit <a href="https://brew.sh/">Homebrew</a>. To install Homebrew on your Mac, run the following command:</p>
-  <pre><code>
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  </code></pre>
-  <div style="border: 2px solid #e6a817; background-color: #fffbf0; color: #3d2f00; padding: 16px 20px; border-radius: 6px; margin-top: 12px; margin-bottom: 12px;">
-    <p style="margin: 0 0 10px 0;"><strong>⚠️ Troubleshooting</strong></p>
-    <p style="margin: 0 0 8px 0;"><strong>SSL certificate error</strong> — If the install command fails with <code>curl: (60) SSL certificate problem: unable to get local issuer certificate</code>, your system's CA certificate bundle is outdated. Install Python 3 from <a href="https://www.python.org/downloads/">python.org</a> (the installer includes a certificate update step), then run <code>/Applications/Python\ 3.x/Install\ Certificates.command</code> (replace 3.x with your version), and retry the Homebrew install command above.</p>
-    <p style="margin: 0 0 8px 0;"><strong>brew update/upgrade fails</strong> — If you see <code>fatal: couldn't find remote ref refs/heads/master</code>, run the following to repair Homebrew's taps:</p>
-  <pre style="background-color: #fff3cd; color: #3d2f00; margin: 0;"><code>brew tap --repair
-git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
-git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow</code></pre>
+  <h2>Step 1: Install a Package Manager</h2>
+  <p>Before installing, check which version of macOS you're running. Click the Apple menu (&#63743;) in the top-left corner and select <strong>About This Mac</strong>. Your macOS version determines which package manager you should use.</p>
+  <div style="margin-bottom: 20px; margin-top: 20px;">
+    <button id="brewBtn" class="tab-button active" onclick="showPackageManager('brew')">macOS 13+ (Use Homebrew)</button>
+    <button id="portsBtn" class="tab-button" onclick="showPackageManager('ports')">macOS 12 and older (Use MacPorts)</button>
   </div>
-  <p>Once installed, Homebrew will encourage you to "add it to your path". <strong>Do not copy the code from this website!</strong> Because the exact commands change depending on your specific username and whether your Mac uses an Intel or Apple Silicon chip, you need to copy the commands directly from your own terminal.</p> 
-  <p>Look for the <code>==> Next steps:</code> section at the very end of the Homebrew installation text in your terminal. It will output three specific lines that look <em>similar</em> to this example. Highlight those three lines in your terminal, copy them, paste them back into the command line, and hit Enter:</p>
-  <pre><code>
-==> Next steps:
+  <div id="brewInstall" style="display:block;">
+    <p>If you are running <strong>macOS Ventura (13) or newer</strong>, we recommend Homebrew. To install Homebrew on your Mac, run the following command in your terminal:</p>
+    <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+    <div class="warning-box">
+      <strong>⚠️ Troubleshooting: SSL certificate error</strong><br>
+      If the install fails with an SSL error, install Python 3 from python.org, run the certificate update script included in the installer, and retry.
+    </div>
+    <p>Once installed, Homebrew will encourage you to "add it to your path". Look for the <code>==> Next steps:</code> section at the very end of the installation text. Highlight the three lines it provides, copy them, paste them back into the command line, and hit Enter:</p>
+    <pre><code>==> Next steps:
 Run these commands in your terminal to add Homebrew to your PATH:
   echo >> /Users/actual_username/.zprofile
   echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/actual_username/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv zsh)"
-  </code></pre>
-  <p><em>(Note: If you are on an older Intel Mac, your terminal will automatically show <code>/usr/local/bin/brew</code> instead of <code>/opt/homebrew</code>. Just copy whatever your terminal outputs!)</em></p>
-  <h3>Step 2: Program Installation</h3>
-  <p>You can now install samtools, BLAST+ (the package is called blast and provides the <code>blastn</code> command), and bwa. Use the following commands:</p>
-  <pre><code>
-brew install samtools
+  eval "$(/opt/homebrew/bin/brew shellenv zsh)"</code></pre>
+    <h3>Step 2: Program Installation (Homebrew)</h3>
+    <p>You can now install the required software using these commands:</p>
+    <pre><code>brew install samtools
 brew install blast
-brew install bwa
-  </code></pre>
-  <p>To manually install BLAST, download the latest disk image (dmg) from the following link: <a href="https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/">NCBI BLAST+ Download</a></p>
-  <p>You are all set. We will begin the Worked Example in the field starting on the <a href="../workflows">Workflow page</a>.</p>
+brew install bwa</code></pre>
+  </div>
+  <div id="portsInstall" style="display:none;">
+    <p>If you are running <strong>macOS Monterey (12) or older</strong>, Homebrew is unsupported and may fail. If it does, we recommend using MacPorts instead.</p>
+    <h4>1. Install Xcode Command Line Tools</h4>
+    <p>MacPorts requires Apple's command line tools to compile software. Run this in your terminal:</p>
+    <pre><code>xcode-select --install</code></pre>
+    <p>A pop-up window will appear asking to install the tools. Click "Install" and wait for it to finish.</p>
+    <h4>2. Install MacPorts</h4>
+    <p>Go to the <a href="https://www.macports.org/install.php" target="_blank">MacPorts Installation Page</a> and download the <code>.pkg</code> installer that matches your specific macOS version (e.g., Monterey, Big Sur, Catalina). Run the installer and follow the prompts.</p>
+    <p>After installing, completely close your terminal window and open a new one so your system recognizes the <code>port</code> command.</p>
+    <h4>3. Update MacPorts</h4>
+    <p>Run the following command to ensure MacPorts has the latest software lists (you will be prompted for your Mac's login password):</p>
+    <pre><code>sudo port selfupdate</code></pre>
+    <h3>Step 2: Program Installation (MacPorts)</h3>
+    <p>You can now install the required software. Because MacPorts installs system-level software, you must use <code>sudo</code> (which requires your password) for these commands:</p>
+    <pre><code>sudo port install samtools
+sudo port install bwa</code></pre>
+  </div>
+  <hr style="margin-top: 30px; margin-bottom: 20px;">
+  <p>Using Macports, the version of BLAST that installs is too old. We recommend installing it manually. To manually install BLAST, download the latest disk image (dmg) from the following link: <a href="https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/" target="_blank">NCBI BLAST+ Download. </a> You may need to allow your device to open the folder, but once the installer is opened, follow the prompts.</p>
 </div>
+<p><br><hr><br></p>
+<div class="warning-box" style="background-color: #eaf4ff; border-left-color: #007bff; color: #004085;">
+  <h3 style="margin-top: 0; color: #0056b3;">Step 3: Test Your Installation!</h3>
+  <p>Before we begin the workshop, it is highly recommended that you verify your programs installed correctly. You can do this by asking your terminal to print the help menu for each program.</p>
+  <p>Run the following three commands one at a time in your terminal:</p>
+  <pre style="background-color: #1e1e1e; color: #d4d4d4;"><code>blastn -help
+samtools
+bwa</code></pre>
+  <p style="margin-bottom: 5px;"><strong>What to expect:</strong></p>
+  <ul style="margin-top: 0;">
+    <li>For <code>blastn -help</code>, you should see a long list of USAGE instructions and optional arguments.</li>
+    <li>For <code>samtools</code>, you should see the Program Version (e.g., Version: 1.21) followed by a list of Commands like Indexing, Editing, and File operations.</li>
+    <li>For <code>bwa</code>, you should see the Program Version (e.g., Version: 0.7.18) followed by a list of Commands like <code>index</code>, <code>mem</code>, and <code>aln</code>.</li>
+  </ul>
+  <p style="margin-bottom: 0;"><em>  <p>You are all set. We will begin the Worked Example in the field starting on the <a href="../workflows">Workflow page</a>.</p></em></p>
+</div>
+<p><br><br></p>
 <p><br><hr><br></p>
 <div style="margin-bottom: 20px;">
   <button id="workedExampleButton" class="tab-button" onclick="showProgram('workedExample')">Worked Example programs information</button>
   <button id="realtimeButton" class="tab-button" onclick="showProgram('realtime')">Real-time analysis programs information</button>
 </div>
 <div id="workedExample" style="display:none;">
-  **Description**: These are the programs everyone will need to complete the example that workshop participants will walk through.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2  id="program-information" >
-    <a href="#program-information" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Program Information</a>
-</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2  id="samtools" >
-    <a href="#samtools" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Samtools</a>
-</h2>
-<p><strong>Description</strong>: Samtools is a suite of programs for interacting with high-throughput sequencing data. It is used for extracting unaligned reads and converting BAM files to FASTA.</p>
-<p><strong>Website</strong>: <a  href="http://www.htslib.org/"    >Samtools Website</a>
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2  id="blast" >
-    <a href="#blast" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">BLAST+</a>
-</h2>
-<p><strong>Description</strong>: BLAST+ is a suite of tools to perform similarity searches against nucleotide and protein databases. It is widely used in bioinformatics for comparing sequence similarity.</p>
-<p><strong>Website</strong>: <a  href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&amp;DOC_TYPE=Download"   rel="external"   >BLAST+ NCBI</a>
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2  id="bwa" >
-    <a href="#bwa" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">BWA</a>
-</h2>
-<p><strong>Description</strong>: BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome. It is commonly used in genome assembly and variant calling.</p>
-<p><strong>Website</strong>: <a  href="https://github.com/lh3/bwa"   rel="external"   >BWA GitHub</a>
-</p>
+  <p><strong>Description</strong>: These are the programs everyone will need to complete the example that workshop participants will walk through.</p>
+  <h2>Program Information</h2>
+  <h3>Samtools</h3>
+  <p><strong>Description</strong>: Samtools is a suite of programs for interacting with high-throughput sequencing data. It is used for extracting unaligned reads and converting BAM files to FASTA.</p>
+  <p><strong>Website</strong>: <a href="http://www.htslib.org/" target="_blank">Samtools Website</a></p>
+  <h3>BLAST+</h3>
+  <p><strong>Description</strong>: BLAST+ is a suite of tools to perform similarity searches against nucleotide and protein databases. It is widely used in bioinformatics for comparing sequence similarity.</p>
+  <p><strong>Website</strong>: <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download" target="_blank">BLAST+ NCBI</a></p>
+  <h3>BWA</h3>
+  <p><strong>Description</strong>: BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent sequences against a large reference genome. It is commonly used in genome assembly and variant calling.</p>
+  <p><strong>Website</strong>: <a href="https://github.com/lh3/bwa" target="_blank">BWA GitHub</a></p>
 </div>
 <div id="realtime" style="display:none;">
-  **Description**: These are the programs you may need if you wish to replicate the analysis performed in the field on the data we generate with the Nanopore run. The participants do not need Dorado for the Worked Example they will be performing on their computers.
-<p>First, you may need wget on Homebrew (for Macs). If <code>wget</code> is unavailable or fails to install, you can use <code>curl -OL</code> in place of <code>wget</code> in the commands below.</p>
-  <pre><code>
-# Install wget (generic)
-brew install wget
-  </code></pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2  id="dorado" >
-    <a href="#dorado" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">Dorado</a>
-</h2>
-<p><strong>Description</strong>: Dorado is a basecalling and alignment tool used for processing Oxford Nanopore sequencing data.
-<br><br>
-<strong>⚠️ Important note on downloading:</strong> Some systems may have trouble with the <code>wget</code> command. If <code>wget [URL]</code> fails to download the file, you can substitute it with <code>curl -OL [URL]</code> instead.
-<br><br>
-<strong>⚠️ Important note on versions:</strong> Make sure you are downloading the correct file for your operating system and processor architecture. Linux and Windows (WSL) use the <code>linux-x64.tar.gz</code> version. For Macs, newer Apple Silicon (M1/M2/M3) models use <code>osx-arm64.zip</code>, while older Intel Macs use <code>osx-x64.tar.gz</code>. (The commands below show the Apple Silicon version for Macs).</p>
-<p><strong>Website</strong>: <a  href="https://github.com/nanoporetech/dorado"   rel="external"   >Dorado GitHub</a>
-</p>
-<p><strong>Installation</strong>:</p>
-  <pre><code>
-# For Linux (generic) & Windows (using WSL)
+  <p><strong>Description</strong>: These are the programs you may need if you wish to replicate the analysis performed in the field on the data we generate with the Nanopore run. The participants do not need Dorado for the Worked Example they will be performing on their computers.</p>
+  <p>First, you may need wget on Homebrew (for Macs). If <code>wget</code> is unavailable or fails to install, you can use <code>curl -OL</code> in place of <code>wget</code> in the commands below.</p>
+  <pre><code># Install wget (generic)
+brew install wget</code></pre>
+  <h2>Dorado</h2>
+  <p><strong>Description</strong>: Dorado is a basecalling and alignment tool used for processing Oxford Nanopore sequencing data.</p>
+  <div class="warning-box">
+    <strong>⚠️ Important note on downloading:</strong> Some systems may have trouble with the <code>wget</code> command. If <code>wget [URL]</code> fails to download the file, you can substitute it with <code>curl -OL [URL]</code> instead.
+  </div>
+  <div class="warning-box">
+    <strong>⚠️ Important note on versions:</strong> Make sure you are downloading the correct file for your operating system and processor architecture. Linux and Windows (WSL) use the <code>linux-x64.tar.gz</code> version. For Macs, newer Apple Silicon (M1/M2/M3) models use <code>osx-arm64.zip</code>, while older Intel Macs use <code>osx-x64.tar.gz</code>. (The commands below show the Apple Silicon version for Macs).
+  </div>
+  <p><strong>Website</strong>: <a href="https://github.com/nanoporetech/dorado" target="_blank">Dorado GitHub</a></p>
+  <h3>Installation</h3>
+  <pre><code># For Linux (generic) & Windows (using WSL)
 wget https://cdn.oxfordnanoportal.com/software/analysis/dorado-1.4.0-linux-x64.tar.gz
 tar -xvzf dorado-1.4.0-linux-x64.tar.gz
 cd dorado-1.4.0-linux-x64/bin/
 export PATH=$PATH:$PWD
 
-# For MacOS (Apple Silicon / M-series chips)
-# We use curl -OL here as it is natively supported on Macs
-curl -OL https://cdn.oxfordnanoportal.com/software/analysis/dorado-1.4.0-osx-arm64.zip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1  id="for-macos-apple-silicon--m-series-chips" >
+    <a href="#for-macos-apple-silicon--m-series-chips" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">For MacOS (Apple Silicon / M-series chips)</a>
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1  id="we-use-curl--ol-here-as-it-is-natively-supported-on-macs" >
+    <a href="#we-use-curl--ol-here-as-it-is-natively-supported-on-macs" style="color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)); text-decoration: none">We use curl -OL here as it is natively supported on Macs</a>
+</h1>
+<p>curl -OL <a  href="https://cdn.oxfordnanoportal.com/software/analysis/dorado-1.4.0-osx-arm64.zip"   rel="external"   >https://cdn.oxfordnanoportal.com/software/analysis/dorado-1.4.0-osx-arm64.zip</a>
+
 unzip dorado-1.4.0-osx-arm64.zip
 cd dorado-1.4.0-osx-arm64/bin/
-export PATH=$PATH:$PWD
-  </code></pre>
+export PATH=$PATH:$PWD</code></pre></p>
 </div>
 <script>
-  // Function to toggle the OS installation tabs
   function showOS(section) {
     document.getElementById('windows').style.display = 'none';
     document.getElementById('mac').style.display = 'none';
@@ -1403,7 +1368,6 @@ export PATH=$PATH:$PWD
     }
   }
 
-  // Function to toggle the Program Information tabs
   function showProgram(section) {
     document.getElementById('realtime').style.display = 'none';
     document.getElementById('workedExample').style.display = 'none';
@@ -1416,6 +1380,21 @@ export PATH=$PATH:$PWD
     } else if(section === 'workedExample') {
       document.getElementById('workedExample').style.display = 'block';
       document.getElementById('workedExampleButton').classList.add('active');
+    }
+  }
+
+  function showPackageManager(manager) {
+    document.getElementById('brewInstall').style.display = 'none';
+    document.getElementById('portsInstall').style.display = 'none';
+    document.getElementById('brewBtn').classList.remove('active');
+    document.getElementById('portsBtn').classList.remove('active');
+
+    if(manager === 'brew') {
+      document.getElementById('brewInstall').style.display = 'block';
+      document.getElementById('brewBtn').classList.add('active');
+    } else if(manager === 'ports') {
+      document.getElementById('portsInstall').style.display = 'block';
+      document.getElementById('portsBtn').classList.add('active');
     }
   }
 
@@ -1840,7 +1819,7 @@ export PATH=$PATH:$PWD
         
     
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Windows (With Ubuntu) / Linux Mac Install Linux on Windows If you’re using Windows, it’s highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don't understand, that's okay- we're going to go over it in the workshop. If you need more details, here is a virtual machine explanation: Ubuntu.","articleSection":"Software","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Software","inLanguage":"en-us","name":"Software","timeRequired":"PT6M","url":"/programs/","wordCount":1130}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","abstract":" Windows (With Ubuntu) / Linux Mac Install Linux on Windows If you're using Windows, it's highly recommended to set up a Linux environment (such as Ubuntu) through the Windows Subsystem for Linux (WSL). This is called a virtual machine. If you don't understand, that's okay- we're going to go over it in the workshop. If you need more details, here is a virtual machine explanation: Ubuntu.","articleSection":"Software","dateCreated":"2024-10-22T00:00:00-07:00","dateModified":"2024-10-22T00:00:00-07:00","headline":"Software","inLanguage":"en-us","name":"Software","timeRequired":"PT6M","url":"/programs/","wordCount":1245}</script>
 
 
 
